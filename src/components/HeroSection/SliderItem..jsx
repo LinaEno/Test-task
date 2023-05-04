@@ -2,7 +2,7 @@ import { ItemBox, ItemDesc, ItemTitle } from "./HeroSection.styled";
 
 const SliderItem = ({ item }) => {
   return (
-    <ItemBox>
+    <ItemBox style={{ width: item.width }}>
       <div>
         <img src={item.img} alt="Hero slide" />
       </div>

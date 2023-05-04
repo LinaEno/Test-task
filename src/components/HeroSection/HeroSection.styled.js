@@ -5,6 +5,49 @@ export const HeroContainer = styled.section`
   align-items: center;
   margin-bottom: 120px;
   height: 634px;
+  .slider-wrapper {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    .slider-bg {
+      /* position: absolute;
+      right: 0;
+      top: 0; */
+      height: 720px;
+      width: 720px;
+      padding: 48px;
+      padding-right: 0;
+      /* display: flex; */
+      /* align-items: flex-end; */
+      /* background-image: url("/hero_background.jpg"); */
+    }
+    .slider-img {
+      height: 720px;
+      width: 720px;
+      display: flex;
+      position: absolute;
+      top: -86px;
+      right: -120px;
+    }
+  }
+  .hero-slider {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    right: -120px;
+    /* left: 48px; */
+    bottom: 38px;
+    .slick-list {
+      /* width: 800px; */
+      width: 690px;
+      overflow: hidden;
+    }
+    .slick-slide {
+      /* width: auto !important; */
+    }
+  }
 `;
 
 export const HeroBox = styled.div`
@@ -121,15 +164,17 @@ export const PartnershipList = styled.ul`
 
 export const ItemBox = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 16px;
+  min-width: 202px;
 
   background: #ffffff;
   box-shadow: 0px 11px 48px rgba(51, 51, 51, 0.06);
   border-radius: 32px;
   padding: 24px;
-  margin-left: 16px;
+  margin-left: 11px;
+  margin-right: 5px;
 `;
 
 export const ItemTitle = styled.p`

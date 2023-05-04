@@ -1,31 +1,48 @@
+import {
+  FeaturedImage,
+  FeaturedSliderItem,
+  FeaturedTag,
+  PersonBox,
+  PersonName,
+  PersonPlace,
+  SalaryBox,
+  SalaryDesc,
+  SalaryTitle,
+} from "./FeaturedSection.styled";
+
 const FeaturedItem = ({ item, onLoad }) => {
   const handleLoad = () => {
     onLoad(false);
   };
 
   return (
-    <div>
-      <img
+    <FeaturedSliderItem className="slider-featured">
+      <FeaturedImage
         onLoad={handleLoad}
         src={item.foto}
         width={340}
         height={382}
         alt="foto"
+        className="slider-featured-img"
       />
-      <div>
+      <FeaturedTag text={item.tags.title}>
         <img src={item.tags.icon} alt="icon" />
         <p>{item.tags.title}</p>
-      </div>
-      <div>
-        <h3>{item.name}</h3>
-        <p>${item.salary.toLocaleString("en-US").replace(/,/g, ".")}</p>
-      </div>
-      <div>
+      </FeaturedTag>
+      <SalaryBox>
+        <SalaryTitle>{item.name}</SalaryTitle>
+        <SalaryDesc>
+          $ {item.salary.toLocaleString("en-US").replace(/,/g, ".")}
+        </SalaryDesc>
+      </SalaryBox>
+      <PersonBox>
         <img src={item.person.foto} alt="foto" />
-        <p>{item.person.fullName}</p>
-        <p>{item.person.place}</p>
-      </div>
-    </div>
+        <div>
+          <PersonName>{item.person.fullName}</PersonName>
+          <PersonPlace>{item.person.place}</PersonPlace>
+        </div>
+      </PersonBox>
+    </FeaturedSliderItem>
   );
 };
 

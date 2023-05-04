@@ -25,7 +25,16 @@ const HeroSection = () => {
         <Search />
         <Partnership />
       </HeroBox>
-      <HeroSlider />
+      <div className="slider-wrapper">
+        <div className="slider-bg">
+          <img
+            className="slider-img"
+            src="/hero_background.jpg"
+            alt="main background"
+          />
+        </div>
+        <HeroSlider />
+      </div>
     </HeroContainer>
   );
 };

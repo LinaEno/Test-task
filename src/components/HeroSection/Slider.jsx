@@ -8,9 +8,10 @@ const settings = {
   infinite: true,
   autoplay: true,
   autoplaySpeed: 3000,
-  slidesToShow: 2,
+  slidesToShow: 3,
   slidesToScroll: 1,
   initialSlide: 0,
+  variableWidth: true,
 };
 
 const HeroSlider = () => {

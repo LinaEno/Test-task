@@ -83,6 +83,21 @@ export const house = [
       place: "Preston Rd. Inglewood, Maine 98380",
     },
   },
+  {
+    id: 5,
+    foto: House1,
+    tags: {
+      icon: Fire,
+      title: "Popular",
+    },
+    name: "Roselands House",
+    salary: 35000000,
+    person: {
+      foto: Person1,
+      fullName: "Dianne Russell",
+      place: "Manchester, Kentucky",
+    },
+  },
 ];
 
 export const villa = [

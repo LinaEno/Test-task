@@ -20,9 +20,8 @@ export const ModalContainer = styled.div`
 `;
 
 export const ModalImage = styled.img`
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   height: auto;
-  /* max-width: 60%;
-  max-height: 60%; */
+  max-height: 500px;
 `;

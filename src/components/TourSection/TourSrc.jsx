@@ -6,7 +6,12 @@ import SliderElement from "./SliderElement";
 import { fotoTour } from "../../constants/tour";
 import { useState } from "react";
 import ModalVideo from "../Modal/ModalVideo";
-import { SliderTourSection } from "./TourSection.styled";
+import {
+  SliderTourSection,
+  SrcContainer,
+  VideoBox,
+  VideoBtn,
+} from "./TourSection.styled";
 
 const TourSrc = () => {
   const [showModal, setShowModal] = useState(false);
@@ -25,22 +30,21 @@ const TourSrc = () => {
   };
 
   return (
-    <div>
-      <div>
+    <SrcContainer>
+      <VideoBox>
         <img src={Tour4} alt="Video" />
-        <button type="button" onClick={toggleVideoModal}>
+        <VideoBtn type="button" onClick={toggleVideoModal}>
           <img src={Play} alt="Play button" />
-        </button>
+        </VideoBtn>
         {showModal ? <ModalVideo onClose={toggleVideoModal} /> : null}
-      </div>
+      </VideoBox>
       <SliderTourSection {...settings}>
         {fotoTour.map((tour, idx) => (
           <SliderElement key={idx} tour={tour} />
         ))}
       </SliderTourSection>
-    </div>
+    </SrcContainer>
   );
 };
 
 export default TourSrc;
-

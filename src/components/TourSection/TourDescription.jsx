@@ -2,49 +2,64 @@ import Tour1 from "../../images/tour/tour1.svg";
 import Tour2 from "../../images/tour/tour2.svg";
 import Tour3 from "../../images/tour/tour3.svg";
 import Tour4 from "../../images/tour/tour4.svg";
-import Phone from "../../images/tour/phone.svg";
+import { ReactComponent as Phone } from "../../images/tour/phone.svg";
 import Person from "../../images/persons/dianne.svg";
+import {
+  Button,
+  TourDesc,
+  TourDescriptionContainer,
+  TourList,
+  TourListItem,
+  TourListText,
+  TourListTitle,
+  TourPersonBox,
+  TourPersonInfo,
+  TourPersonName,
+  TourPersonPosition,
+  TourPreTitle,
+  TourTitle,
+} from "./TourSection.styled";
 
 const TourDescription = () => {
   return (
-    <div>
-      <p>Ready to Sell!</p>
-      <h2>Let’s tour and see our house!</h2>
-      <p>
+    <TourDescriptionContainer>
+      <TourPreTitle>Ready to Sell!</TourPreTitle>
+      <TourTitle>Let’s tour and see our house!</TourTitle>
+      <TourDesc>
         Houses recommended by our partners that have been curated to become the
         home of your dreams!
-      </p>
-      <p>House Detail</p>
-      <ul>
-        <li>
+      </TourDesc>
+      <TourListTitle>House Detail</TourListTitle>
+      <TourList>
+        <TourListItem>
           <img src={Tour1} alt="icon" />
-          <p>4 Bedrooms</p>
-        </li>
-        <li>
+          <TourListText>4 Bedrooms</TourListText>
+        </TourListItem>
+        <TourListItem>
           <img src={Tour2} alt="icon" />
-          <p>2 Bathrooms</p>
-        </li>
-        <li>
+          <TourListText>2 Bathrooms</TourListText>
+        </TourListItem>
+        <TourListItem>
           <img src={Tour3} alt="icon" />
-          <p>1 Carport</p>
-        </li>
-        <li>
+          <TourListText>1 Carport</TourListText>
+        </TourListItem>
+        <TourListItem>
           <img src={Tour4} alt="icon" />
-          <p>2 Floors</p>
-        </li>
-      </ul>
-      <div>
-        <img src={Person} alt="Person foto" />
-        <div>
-          <p>Dianne Russell</p>
-          <p>Manager Director</p>
-        </div>
-        <button type="button">
-          <img src={Phone} alt="Person foto" />
+          <TourListText>2 Floors</TourListText>
+        </TourListItem>
+      </TourList>
+      <TourPersonBox>
+        <img src={Person} alt="Person foto" width={56} height={56} />
+        <TourPersonInfo>
+          <TourPersonName>Dianne Russell</TourPersonName>
+          <TourPersonPosition>Manager Director</TourPersonPosition>
+        </TourPersonInfo>
+        <Button type="button">
+          <Phone />
           Contact Now
-        </button>
-      </div>
-    </div>
+        </Button>
+      </TourPersonBox>
+    </TourDescriptionContainer>
   );
 };
 

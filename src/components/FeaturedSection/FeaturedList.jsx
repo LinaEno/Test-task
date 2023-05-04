@@ -24,7 +24,11 @@ function SampleNextArrow(props) {
   return (
     <ArrowRightContainer
       className={className}
-      style={{ ...style, display: "block", background: "#10B981" }}
+      style={{
+        ...style,
+        display: "block",
+        background: "#10B981",
+      }}
       onClick={onClick}
     >
       <img src={ArrowRight} alt="arrow" width={28} height={28} />
@@ -37,7 +41,11 @@ function SamplePrevArrow(props) {
   return (
     <ArrowLeftContainer
       className={className}
-      style={{ ...style, display: "block", background: "#10B981" }}
+      style={{
+        ...style,
+        display: "block",
+        background: "#10B981",
+      }}
       onClick={onClick}
     >
       <img src={ArrowLeft} alt="arrow" width={28} height={28} />
@@ -48,8 +56,8 @@ function SamplePrevArrow(props) {
 const settings = {
   prevArrow: <SamplePrevArrow />,
   nextArrow: <SampleNextArrow />,
-  infinite: false,
-  slidesToShow: 3,
+  infinite: true,
+  slidesToShow: 4,
   slidesToScroll: 1,
 };
 
