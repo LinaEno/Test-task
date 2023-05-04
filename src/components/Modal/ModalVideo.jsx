@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
-import { Overlay, ModalContainer, ModalImage } from "./Modal.styled";
+import ReactPlayer from "react-player";
+import { Overlay, ModalContainer } from "./Modal.styled";
 
 const modalRoot = document.querySelector("#modal-root");
 
-const Modal = ({ tour, onClose }) => {
+const ModalVideo = ({ onClose }) => {
   useEffect(() => {
     const handleKeydown = (e) => {
       if (e.code === "Escape") {
@@ -25,11 +26,17 @@ const Modal = ({ tour, onClose }) => {
   return createPortal(
     <Overlay onClick={handleBackdropClick}>
       <ModalContainer>
-        <ModalImage src={tour.largeImg} alt="Large foto" />
+        <ReactPlayer
+          width={900}
+          height={500}
+          url="https://res.cloudinary.com/du0wwqbv3/video/upload/v1683134143/istockphoto-1400073632-640_adpp_is_vgj9xd.mp4"
+          controls={true}
+          volume={0.5}
+        />
       </ModalContainer>
     </Overlay>,
     modalRoot
   );
 };
 
-export default Modal;
+export default ModalVideo;

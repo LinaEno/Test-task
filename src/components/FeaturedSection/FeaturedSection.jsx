@@ -1,13 +1,17 @@
 import React from "react";
 import FeaturedList from "./FeaturedList";
+import {
+  FeaturedContainer,
+  FeaturedPreTitle,
+  FeaturedTitle,
+} from "./FeaturedSection.styled";
 
 const FeaturedSection = () => {
   return (
-    <section>
-      <p>Our Recommendation</p>
-      <h2>Featured House</h2>
+    <FeaturedContainer>
+      <FeaturedPreTitle>Our Recommendation</FeaturedPreTitle>
       <FeaturedList />
-    </section>
+    </FeaturedContainer>
   );
 };
 

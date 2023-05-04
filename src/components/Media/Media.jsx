@@ -1,12 +1,20 @@
 import { useMediaQuery } from "react-responsive";
 
-export const Desktop = ({ children }) => {
-  const isDesktop = useMediaQuery({ minWidth: 1279 });
+export const DesktopS = ({ children }) => {
+  const isDesktop = useMediaQuery({ minWidth: 1200 });
+  return isDesktop ? children : null;
+};
+export const DesktopM = ({ children }) => {
+  const isDesktop = useMediaQuery({ minWidth: 1440 });
+  return isDesktop ? children : null;
+};
+export const DesktopL = ({ children }) => {
+  const isDesktop = useMediaQuery({ minWidth: 1920 });
   return isDesktop ? children : null;
 };
 
 export const Tablet = ({ children }) => {
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1279 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1199 });
   return isTablet ? children : null;
 };
 
@@ -21,6 +29,6 @@ export const Default = ({ children }) => {
 };
 
 export const NoDesktop = ({ children }) => {
-  const isNoDesktop = useMediaQuery({ maxWidth: 1279 });
+  const isNoDesktop = useMediaQuery({ maxWidth: 1199 });
   return isNoDesktop ? children : null;
 };

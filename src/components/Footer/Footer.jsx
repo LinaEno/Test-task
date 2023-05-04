@@ -1,97 +1,115 @@
 import { Link } from "react-router-dom";
 import Logo from "../../images/logo.svg";
-import { LogoLink } from "./Footer.styled";
+import {
+  FooterBox,
+  FooterDesc,
+  LogoLink,
+  SocialList,
+  NavBox,
+  NavTitle,
+  NavLink,
+  NavList,
+  ContactLink,
+  NavItem,
+  NavItemContact,
+  SocialLink,
+} from "./Footer.styled";
+import { LogoBox } from "../Navbar/Navbar.styled";
 
-import Facebook from "../../images/facebook.svg";
-import Twitter from "../../images/twitter.svg";
-import Instagram from "../../images/instagram.svg";
+import { ReactComponent as Facebook } from "../../images/facebook.svg";
+import { ReactComponent as Twitter } from "../../images/twitter.svg";
+import { ReactComponent as Instagram } from "../../images/instagram.svg";
 
 const Footer = () => {
   return (
-    <footer>
+    <FooterBox>
       <div>
-        <Link>
+        <LogoBox>
           <img src={Logo} alt="Logo" />
           <LogoLink>Hounter</LogoLink>
-        </Link>
-        <p>
+        </LogoBox>
+        <FooterDesc>
           We provide information about properties such as houses, villas and
           apartments to help people find their dream home
-        </p>
-        <ul>
+        </FooterDesc>
+        <SocialList>
           <li>
-            <Link>
-              <img src={Facebook} alt="Facebook icon" />
-            </Link>
+            <SocialLink>
+              <Facebook className="social__svg" />
+            </SocialLink>
           </li>
           <li>
-            <Link>
-              <img src={Twitter} alt="Twitter icon" />
-            </Link>
+            <SocialLink>
+              <Twitter className="social__svg" />
+            </SocialLink>
           </li>
           <li>
-            <Link>
-              <img src={Instagram} alt="Instagram icon" />
-            </Link>
+            <SocialLink>
+              <Instagram className="social__svg" />
+            </SocialLink>
           </li>
-        </ul>
+        </SocialList>
       </div>
-      <div>
+      <NavBox>
         <div>
-          <p>Property</p>
-          <ul>
+          <NavTitle>Property</NavTitle>
+          <NavList>
             <li>
-              <Link>House</Link>
+              <NavLink>House</NavLink>
             </li>
             <li>
-              <Link>Apartment</Link>
+              <NavLink>Apartment</NavLink>
             </li>
             <li>
-              <Link>Villa</Link>
+              <NavLink>Villa</NavLink>
             </li>
-          </ul>
+          </NavList>
         </div>
         <div>
-          <p>Article</p>
-          <ul>
-            <li>
-              <Link>New Article</Link>
-            </li>
-            <li>
-              <Link>Popular Article</Link>
-            </li>
-            <li>
-              <Link>Most Read</Link>
-            </li>
-            <li>
-              <Link>Tips & Tricks</Link>
-            </li>
-          </ul>
+          <NavTitle>Article</NavTitle>
+          <NavList>
+            <NavItem>
+              <NavLink>New Article</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>Popular Article</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>Most Read</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>Tips & Tricks</NavLink>
+            </NavItem>
+          </NavList>
         </div>
         <div>
-          <p>Contact</p>
+          <NavTitle>Contact</NavTitle>
           <address>
-            <ul>
-              <li>
-                <a
+            <NavList>
+              <NavItemContact>
+                <ContactLink
                   href="https://goo.gl/maps/dUXZxaFyEbXxV5ks6"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                 >
                   2464 Royal Ln. Mesa, New Jersey 45463
-                </a>
-              </li>
-              <li>
-                <a href="tel:(671) 555-0110">(671) 555-0110</a>
-              </li>
-              <li>
-                <a href="mailto:info@hounter.com">info@hounter.com</a>
-              </li>
-            </ul>
+                </ContactLink>
+              </NavItemContact>
+              <NavItemContact>
+                <ContactLink href="tel:(671) 555-0110">
+                  (671) 555-0110
+                </ContactLink>
+              </NavItemContact>
+              <NavItemContact>
+                <ContactLink href="mailto:info@hounter.com">
+                  info@hounter.com
+                </ContactLink>
+              </NavItemContact>
+            </NavList>
           </address>
         </div>
-      </div>
-    </footer>
+      </NavBox>
+    </FooterBox>
   );
 };
 

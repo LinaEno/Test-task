@@ -10,11 +10,12 @@ const settings = {
   autoplaySpeed: 3000,
   slidesToShow: 2,
   slidesToScroll: 1,
+  initialSlide: 0,
 };
 
 const HeroSlider = () => {
   return (
-    <Slider {...settings}>
+    <Slider {...settings} className="hero-slider">
       {heroSlider.map((item) => (
         <SliderItem item={item} key={item.id} />
       ))}

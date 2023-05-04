@@ -1,20 +1,23 @@
 import { useState } from "react";
-import Slider from "react-slick";
 
 import { house, villa, apartment } from "../../constants/featuredHouse";
 import FeaturedItem from "./FeaturedItem";
 
 import {
-  MdOutlineArrowBackIos,
-  MdOutlineArrowForwardIos,
-} from "react-icons/md";
-
-import {
   ArrowRightContainer,
   ArrowLeftContainer,
+  FeaturedListBtn,
+  FeaturedTitle,
+  FeaturedTitleBox,
+  Button,
+  FeaturedSlider,
 } from "./FeaturedSection.styled";
 
-// import Arrow from "../../images/arrow-search.svg";
+import ArrowRight from "../../images/arrow-search.svg";
+import ArrowLeft from "../../images/arrow-left.svg";
+import { ReactComponent as HouseIcon } from "../../images/house-fill.svg";
+import { ReactComponent as VillaIcon } from "../../images/ic_round-villa.svg";
+import { ReactComponent as ApartmentIcon } from "../../images/ic_round-apartment.svg";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -24,7 +27,7 @@ function SampleNextArrow(props) {
       style={{ ...style, display: "block", background: "#10B981" }}
       onClick={onClick}
     >
-      <MdOutlineArrowForwardIos />
+      <img src={ArrowRight} alt="arrow" width={28} height={28} />
     </ArrowRightContainer>
   );
 }
@@ -37,7 +40,7 @@ function SamplePrevArrow(props) {
       style={{ ...style, display: "block", background: "#10B981" }}
       onClick={onClick}
     >
-      <MdOutlineArrowBackIos />
+      <img src={ArrowLeft} alt="arrow" width={28} height={28} />
     </ArrowLeftContainer>
   );
 }
@@ -52,6 +55,7 @@ const settings = {
 
 const FeaturedList = () => {
   const [dataArray, setDataArray] = useState(house);
+  const [loading, setLoading] = useState(true);
 
   const handleLinkClick = (event, arrayName) => {
     event.preventDefault();
@@ -73,37 +77,44 @@ const FeaturedList = () => {
 
   return (
     <>
-      <ul>
-        <li>
-          <button
-            type="button"
-            onClick={(event) => handleLinkClick(event, "house")}
-          >
-            House
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            onClick={(event) => handleLinkClick(event, "villa")}
-          >
-            Villa
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            onClick={(event) => handleLinkClick(event, "apartment")}
-          >
-            Apartment
-          </button>
-        </li>
-      </ul>
-      <Slider {...settings}>
+      <FeaturedTitleBox>
+        <FeaturedTitle>Featured House</FeaturedTitle>
+        <FeaturedListBtn>
+          <li>
+            <Button
+              type="button"
+              onClick={(event) => handleLinkClick(event, "house")}
+            >
+              <HouseIcon />
+              House
+            </Button>
+          </li>
+          <li>
+            <Button
+              type="button"
+              onClick={(event) => handleLinkClick(event, "villa")}
+            >
+              <VillaIcon />
+              Villa
+            </Button>
+          </li>
+          <li>
+            <Button
+              type="button"
+              onClick={(event) => handleLinkClick(event, "apartment")}
+            >
+              <ApartmentIcon />
+              Apartment
+            </Button>
+          </li>
+        </FeaturedListBtn>
+      </FeaturedTitleBox>
+      {loading && <h2>Loading...</h2>}
+      <FeaturedSlider {...settings}>
         {dataArray.map((item) => (
-          <FeaturedItem item={item} key={item.id} />
+          <FeaturedItem onLoad={setLoading} item={item} key={item.id} />
         ))}
-      </Slider>
+      </FeaturedSlider>
     </>
   );
 };

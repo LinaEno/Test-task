@@ -1,9 +1,17 @@
-import React from "react";
+const FeaturedItem = ({ item, onLoad }) => {
+  const handleLoad = () => {
+    onLoad(false);
+  };
 
-const FeaturedItem = ({ item }) => {
   return (
     <div>
-      <img src={item.foto} width={340} height={382} alt="foto" />
+      <img
+        onLoad={handleLoad}
+        src={item.foto}
+        width={340}
+        height={382}
+        alt="foto"
+      />
       <div>
         <img src={item.tags.icon} alt="icon" />
         <p>{item.tags.title}</p>

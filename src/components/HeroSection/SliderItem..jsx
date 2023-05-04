@@ -1,16 +1,16 @@
-import React from "react";
+import { ItemBox, ItemDesc, ItemTitle } from "./HeroSection.styled";
 
 const SliderItem = ({ item }) => {
   return (
-    <div>
+    <ItemBox>
       <div>
         <img src={item.img} alt="Hero slide" />
       </div>
       <div>
-        <p>{item.title}</p>
-        <p>{item.desc}</p>
+        <ItemTitle>{item.title}</ItemTitle>
+        <ItemDesc>{item.desc}</ItemDesc>
       </div>
-    </div>
+    </ItemBox>
   );
 };
 
