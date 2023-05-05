@@ -13,10 +13,10 @@ import Apartment2 from "../images/apartment/apartment2.jpg";
 import Apartment3 from "../images/apartment/apartment3.jpg";
 import Apartment4 from "../images/apartment/apartment4.jpg";
 
-import Person1 from "../images/persons/dianne.svg";
-import Person2 from "../images/persons/robert.svg";
-import Person3 from "../images/persons/ronald.svg";
-import Person4 from "../images/persons/jenny.svg";
+import Person1 from "../images/persons/dianne.png";
+import Person2 from "../images/persons/robert.png";
+import Person3 from "../images/persons/ronald.png";
+import Person4 from "../images/persons/jenny.png";
 
 import Fire from "../images/icons/fire.svg";
 import Home from "../images/icons/home.svg";
@@ -70,21 +70,6 @@ export const house = [
   },
   {
     id: 4,
-    foto: House4,
-    tags: {
-      icon: Home,
-      title: "New house",
-    },
-    name: "Cosmo's House",
-    salary: 22000000,
-    person: {
-      foto: Person4,
-      fullName: "Jenny Wilson",
-      place: "Preston Rd. Inglewood, Maine 98380",
-    },
-  },
-  {
-    id: 5,
     foto: House1,
     tags: {
       icon: Fire,
@@ -96,6 +81,21 @@ export const house = [
       foto: Person1,
       fullName: "Dianne Russell",
       place: "Manchester, Kentucky",
+    },
+  },
+  {
+    id: 5,
+    foto: House4,
+    tags: {
+      icon: Home,
+      title: "New house",
+    },
+    name: "Cosmo's House",
+    salary: 22000000,
+    person: {
+      foto: Person4,
+      fullName: "Jenny Wilson",
+      place: "Preston Rd. Inglewood, Maine 98380",
     },
   },
 ];
@@ -162,6 +162,21 @@ export const villa = [
       place: "Preston Rd. Inglewood, Maine 98380",
     },
   },
+  {
+    id: 5,
+    foto: Villa1,
+    tags: {
+      icon: Fire,
+      title: "Popular",
+    },
+    name: "Sea Breeze Estate",
+    salary: 31000000,
+    person: {
+      foto: Person1,
+      fullName: "Dianne Russell",
+      place: "Manchester, Kentucky",
+    },
+  },
 ];
 
 export const apartment = [
@@ -225,6 +240,21 @@ export const apartment = [
       foto: Person4,
       fullName: "Jenny Wilson",
       place: "Preston Rd. Inglewood, Maine 98380",
+    },
+  },
+  {
+    id: 5,
+    foto: Apartment1,
+    tags: {
+      icon: Wallet,
+      title: "Best Deals",
+    },
+    name: "Oasis Apartments",
+    salary: 43000000,
+    person: {
+      foto: Person3,
+      fullName: "Ronald Richards",
+      place: "Santa Ana, Illinois",
     },
   },
 ];

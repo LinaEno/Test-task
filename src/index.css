@@ -329,3 +329,15 @@ a:hover {
   opacity: 0.75;
   color: black;
 }
+
+.subSection {
+  background-image: url(./images/subscribe/sub_background.jpg);
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1920px) {
+  .social__svg {
+    width: 40px;
+    height: 40px;
+  }
+}

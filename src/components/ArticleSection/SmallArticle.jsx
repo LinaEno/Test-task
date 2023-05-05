@@ -1,21 +1,32 @@
 import Clock from "../../images/clock.svg";
+import {
+  ArticleDateBox,
+  ArticleDate,
+  PersonData,
+  PersonName,
+  SmallArticleTitle,
+  SmallArticleWrapper,
+  SmallArticleImg,
+} from "./ArticleSection.styled";
 
 const SmallArticle = ({ article }) => {
   return (
-    <div>
+    <SmallArticleWrapper>
+      <SmallArticleImg src={article.foto} alt="Article foto" />
       <div>
-        <img src={article.foto} alt="Article foto" />
-      </div>
-      <div>
-        <img src={article.fotoPerson} alt="Person foto" />
-        <span>{article.fullName}</span>
-        <p>{article.title}</p>
-        <p>
+        <PersonData>
+          <img src={article.fotoPerson} alt="Person foto" width={32} />
+          <PersonName>{article.fullName}</PersonName>
+        </PersonData>
+        <SmallArticleTitle>{article.title}</SmallArticleTitle>
+        <ArticleDateBox>
           <img src={Clock} alt="Clock icon" />
-          {article.time} | {article.date}
-        </p>
+          <ArticleDate>
+            {article.time} | {article.date}
+          </ArticleDate>
+        </ArticleDateBox>
       </div>
-    </div>
+    </SmallArticleWrapper>
   );
 };
 

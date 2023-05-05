@@ -1,10 +1,6 @@
 import React from "react";
 import FeaturedList from "./FeaturedList";
-import {
-  FeaturedContainer,
-  FeaturedPreTitle,
-  FeaturedTitle,
-} from "./FeaturedSection.styled";
+import { FeaturedContainer, FeaturedPreTitle } from "./FeaturedSection.styled";
 
 const FeaturedSection = () => {
   return (

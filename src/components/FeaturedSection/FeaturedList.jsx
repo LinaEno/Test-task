@@ -3,6 +3,12 @@ import { useState } from "react";
 import { house, villa, apartment } from "../../constants/featuredHouse";
 import FeaturedItem from "./FeaturedItem";
 
+import ArrowRight from "../../images/arrow-search.svg";
+import ArrowLeft from "../../images/arrow-left.svg";
+import { ReactComponent as HouseIcon } from "../../images/house-fill.svg";
+import { ReactComponent as VillaIcon } from "../../images/ic_round-villa.svg";
+import { ReactComponent as ApartmentIcon } from "../../images/ic_round-apartment.svg";
+
 import {
   ArrowRightContainer,
   ArrowLeftContainer,
@@ -12,12 +18,6 @@ import {
   Button,
   FeaturedSlider,
 } from "./FeaturedSection.styled";
-
-import ArrowRight from "../../images/arrow-search.svg";
-import ArrowLeft from "../../images/arrow-left.svg";
-import { ReactComponent as HouseIcon } from "../../images/house-fill.svg";
-import { ReactComponent as VillaIcon } from "../../images/ic_round-villa.svg";
-import { ReactComponent as ApartmentIcon } from "../../images/ic_round-apartment.svg";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -59,6 +59,23 @@ const settings = {
   infinite: true,
   slidesToShow: 4,
   slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 320,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };
 
 const FeaturedList = () => {

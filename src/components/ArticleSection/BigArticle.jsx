@@ -1,22 +1,38 @@
 import Clock from "../../images/clock.svg";
+import {
+  ArticleDate,
+  ArticleDateBox,
+  BigArticleDesc,
+  BigArticleImg,
+  BigArticleTitle,
+  BigArticleWrapper,
+  PersonData,
+  PersonName,
+} from "./ArticleSection.styled";
 
 const BigArticle = ({ article }) => {
   return (
-    <div>
+    <BigArticleWrapper>
+      <BigArticleImg
+        src={article.foto}
+        alt="Article foto"
+        style={{ marginBottom: 24 }}
+      />
       <div>
-        <img src={article.foto} alt="Article foto" />
-      </div>
-      <div>
-        <img src={article.fotoPerson} alt="Person foto" />
-        <span>{article.fullName}</span>
-        <p>{article.title}</p>
-        <p>{article.desc}</p>
-        <p>
+        <PersonData>
+          <img src={article.fotoPerson} alt="Person foto" width={32} />
+          <PersonName>{article.fullName}</PersonName>
+        </PersonData>
+        <BigArticleTitle>{article.title}</BigArticleTitle>
+        <BigArticleDesc>{article.desc}</BigArticleDesc>
+        <ArticleDateBox>
           <img src={Clock} alt="Clock icon" />
-          {article.time} | {article.date}
-        </p>
+          <ArticleDate>
+            {article.time} | {article.date}
+          </ArticleDate>
+        </ArticleDateBox>
       </div>
-    </div>
+    </BigArticleWrapper>
   );
 };
 

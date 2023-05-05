@@ -12,6 +12,10 @@ export const DesktopL = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 1920 });
   return isDesktop ? children : null;
 };
+export const DesktopOnly = ({ children }) => {
+  const isDesktop = useMediaQuery({ minWidth: 1200 });
+  return isDesktop ? children : null;
+};
 
 export const Tablet = ({ children }) => {
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1199 });

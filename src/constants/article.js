@@ -3,10 +3,10 @@ import Article2 from "../images/article/article2.jpg";
 import Article3 from "../images/article/article3.jpg";
 import Article4 from "../images/article/article4.jpg";
 
-import Person1 from "../images/persons/dianne.svg";
-import Person2 from "../images/persons/coutney.svg";
-import Person3 from "../images/persons/dariene.svg";
-import Person4 from "../images/persons/cameron.svg";
+import Person1 from "../images/persons/dianne.png";
+import Person2 from "../images/persons/courtney.png";
+import Person3 from "../images/persons/darlene.png";
+import Person4 from "../images/persons/cameron.png";
 
 export const articles = [
   {

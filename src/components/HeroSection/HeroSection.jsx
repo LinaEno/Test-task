@@ -2,6 +2,8 @@ import Search from "./Search";
 import Partnership from "./Partnership";
 import HeroSlider from "./Slider";
 
+import { DesktopOnly } from "../Media/Media";
+
 import {
   HeroBox,
   HeroContainer,
@@ -26,13 +28,15 @@ const HeroSection = () => {
         <Partnership />
       </HeroBox>
       <div className="slider-wrapper">
-        <div className="slider-bg">
-          <img
-            className="slider-img"
-            src="/hero_background.jpg"
-            alt="main background"
-          />
-        </div>
+        <DesktopOnly>
+          <div className="slider-bg">
+            <img
+              className="slider-img"
+              src="/hero_background.jpg"
+              alt="main background"
+            />
+          </div>
+        </DesktopOnly>
         <HeroSlider />
       </div>
     </HeroContainer>

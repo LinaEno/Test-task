@@ -3,7 +3,7 @@ import Tour2 from "../../images/tour/tour2.svg";
 import Tour3 from "../../images/tour/tour3.svg";
 import Tour4 from "../../images/tour/tour4.svg";
 import { ReactComponent as Phone } from "../../images/tour/phone.svg";
-import Person from "../../images/persons/dianne.svg";
+import Person from "../../images/persons/dianne.png";
 import {
   Button,
   TourDesc,

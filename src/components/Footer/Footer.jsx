@@ -1,5 +1,10 @@
-import { Link } from "react-router-dom";
 import Logo from "../../images/logo.svg";
+
+import { ReactComponent as Facebook } from "../../images/facebook.svg";
+import { ReactComponent as Twitter } from "../../images/twitter.svg";
+import { ReactComponent as Instagram } from "../../images/instagram.svg";
+
+import { LogoBox } from "../Navbar/Navbar.styled";
 import {
   FooterBox,
   FooterDesc,
@@ -14,11 +19,6 @@ import {
   NavItemContact,
   SocialLink,
 } from "./Footer.styled";
-import { LogoBox } from "../Navbar/Navbar.styled";
-
-import { ReactComponent as Facebook } from "../../images/facebook.svg";
-import { ReactComponent as Twitter } from "../../images/twitter.svg";
-import { ReactComponent as Instagram } from "../../images/instagram.svg";
 
 const Footer = () => {
   return (

@@ -7,12 +7,22 @@ import {
 
 import Place from "../../images/place.svg";
 import Arrow from "../../images/arrow-search.svg";
+import { Default, Mobile } from "../Media/Media";
 
 const Search = () => {
   return (
     <HeroLabel>
       <HeroInputImg src={Place} alt="Place icon" />
-      <HeroInput type="text" placeholder="Search for the location you want!" />
+      <Mobile>
+        <HeroInput type="text" placeholder="Search for the location..." />
+      </Mobile>
+      <Default>
+        <HeroInput
+          type="text"
+          placeholder="Search for the location you want!"
+        />
+      </Default>
+
       <HeroInputButton>
         Search
         <img src={Arrow} alt="Arrow icon" style={{ marginLeft: 4 }} />
