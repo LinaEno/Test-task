@@ -52,14 +52,13 @@ export const ReviewTitle = styled.h2`
   margin-bottom: 18px;
 
   @media screen and (min-width: 768px) {
-    width: 424px;
+    width: auto;
     margin-bottom: 24px;
   }
 
   @media screen and (min-width: 1920px) {
     font-size: 40px;
     line-height: calc(50 / 40);
-    width: 560px;
   }
 `;
 
@@ -68,8 +67,16 @@ export const ReviewSectionSlider = styled(Slider)`
     overflow: hidden;
 
     @media screen and (min-width: 1200px) {
-      left: -120px;
+      left: -80px;
+      width: 1200px;
+    }
+    @media screen and (min-width: 1440px) {
+      left: -160px;
       width: 1440px;
+    }
+    @media screen and (min-width: 1920px) {
+      left: -280px;
+      width: 1920px;
     }
   }
 
@@ -87,6 +94,9 @@ export const ReviewSectionSlider = styled(Slider)`
   }
   .slick-slide.slick-active {
     width: 100vw !important;
+    @media screen and (min-width: 768px) {
+      width: 700px !important;
+    }
     @media screen and (min-width: 1200px) {
       width: 740px !important;
     }
@@ -100,8 +110,17 @@ export const ReviewSectionSlider = styled(Slider)`
       .slick-slide.slick-center + .slick-slide.slick-active
     ):not(.slick-center) {
     margin-left: 0;
+    @media screen and (min-width: 768px) {
+      margin-left: -52px;
+    }
     @media screen and (min-width: 1200px) {
-      margin-left: -620px;
+      margin-left: -690px;
+    }
+    @media screen and (min-width: 1440px) {
+      margin-left: -594px;
+    }
+    @media screen and (min-width: 1920px) {
+      margin-left: -350px;
     }
   }
 
@@ -192,7 +211,17 @@ export const Review = styled.div`
 `;
 
 export const ReviewImgBox = styled.div`
-  width: 740px;
+  width: 700px;
+  @media screen and (min-width: 1200px) {
+    width: 740px;
+  }
+`;
+
+export const ReviewImg = styled.img`
+  width: 700px;
+  @media screen and (min-width: 1200px) {
+    width: 740px;
+  }
 `;
 
 export const ReviewTextBox = styled.div`
@@ -201,20 +230,28 @@ export const ReviewTextBox = styled.div`
   width: 95vw;
   padding: 12px;
   margin-bottom: 29px;
+  box-shadow: 0px 9px 32px rgba(89, 92, 219, 0.05);
+  border-radius: 16px;
 
   @media screen and (min-width: 480px) {
     width: 440px;
   }
+  @media screen and (min-width: 768px) {
+    width: 612px;
+    padding: 32px;
+    margin-top: -60px;
+    margin-left: 44px;
+  }
   @media screen and (min-width: 1200px) {
     position: absolute;
     z-index: 200;
-    padding: 32px;
-    width: 612px;
     bottom: 10px;
     left: 50%;
     transform: translate(-50%);
     box-shadow: 0px 9px 32px rgba(89, 92, 219, 0.05);
     border-radius: 16px;
+    margin-top: 0;
+    margin-left: 0;
   }
 `;
 

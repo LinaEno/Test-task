@@ -1,6 +1,7 @@
-import { PartnershipList, PartnershipTitle } from "./HeroSection.styled";
+import { Link } from "react-router-dom";
 
 import { partnership } from "../../constants/partnership";
+import { PartnershipList, PartnershipTitle } from "./HeroSection.styled";
 
 const Partnership = () => {
   return (
@@ -10,7 +11,9 @@ const Partnership = () => {
         {partnership.map(({ id, logo }) => {
           return (
             <li key={id}>
-              <img src={logo} alt="partner logo" />
+              <Link>
+                <img src={logo} alt="partner logo" />
+              </Link>
             </li>
           );
         })}

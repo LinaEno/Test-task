@@ -20,7 +20,6 @@ const FeaturedItem = ({ item, onLoad }) => {
       <FeaturedImage
         onLoad={handleLoad}
         src={item.foto}
-        width={340}
         height={382}
         alt="foto"
         className="slider-featured-img"

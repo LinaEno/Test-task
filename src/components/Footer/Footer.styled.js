@@ -6,7 +6,7 @@ export const FooterBox = styled.footer`
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 
   @media screen and (min-width: 480px) {
   }
@@ -14,7 +14,7 @@ export const FooterBox = styled.footer`
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
-    margin-bottom: 60px;
+    padding-bottom: 60px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -23,7 +23,7 @@ export const FooterBox = styled.footer`
 
   @media screen and (min-width: 1440px) {
     gap: 254px;
-    margin-bottom: 120px;
+    padding-bottom: 120px;
   }
 `;
 

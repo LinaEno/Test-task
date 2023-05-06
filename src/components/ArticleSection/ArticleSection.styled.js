@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const ArticleContainer = styled.section`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -259,5 +260,22 @@ export const BigArticleDesc = styled.p`
     width: 720px;
     font-size: 20px;
     line-height: calc(28 / 20);
+  }
+`;
+
+export const BgImage = styled.img`
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    position: absolute;
+    content: "";
+    left: -120px;
+    top: -216px;
+    z-index: -1;
+  }
+
+  @media screen and (min-width: 1920px) {
+    left: -240px;
   }
 `;

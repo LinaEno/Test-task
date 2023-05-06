@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <FooterBox>
       <div>
-        <LogoBox>
+        <LogoBox href="#logo">
           <img src={Logo} alt="Logo" />
           <LogoLink>Hounter</LogoLink>
         </LogoBox>

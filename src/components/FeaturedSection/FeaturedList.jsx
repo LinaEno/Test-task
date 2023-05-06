@@ -3,8 +3,6 @@ import { useState } from "react";
 import { house, villa, apartment } from "../../constants/featuredHouse";
 import FeaturedItem from "./FeaturedItem";
 
-import ArrowRight from "../../images/arrow-search.svg";
-import ArrowLeft from "../../images/arrow-left.svg";
 import { ReactComponent as HouseIcon } from "../../images/house-fill.svg";
 import { ReactComponent as VillaIcon } from "../../images/ic_round-villa.svg";
 import { ReactComponent as ApartmentIcon } from "../../images/ic_round-apartment.svg";
@@ -17,6 +15,8 @@ import {
   FeaturedTitleBox,
   Button,
   FeaturedSlider,
+  ArrowLeftStyled,
+  ArrowRightStyled,
 } from "./FeaturedSection.styled";
 
 function SampleNextArrow(props) {
@@ -26,12 +26,10 @@ function SampleNextArrow(props) {
       className={className}
       style={{
         ...style,
-        display: "block",
-        background: "#10B981",
       }}
       onClick={onClick}
     >
-      <img src={ArrowRight} alt="arrow" width={28} height={28} />
+      <ArrowRightStyled />
     </ArrowRightContainer>
   );
 }
@@ -43,12 +41,10 @@ function SamplePrevArrow(props) {
       className={className}
       style={{
         ...style,
-        display: "block",
-        background: "#10B981",
       }}
       onClick={onClick}
     >
-      <img src={ArrowLeft} alt="arrow" width={28} height={28} />
+      <ArrowLeftStyled />
     </ArrowLeftContainer>
   );
 }
@@ -61,11 +57,31 @@ const settings = {
   slidesToScroll: 1,
   responsive: [
     {
+      breakpoint: 1440,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+    {
       breakpoint: 768,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
     },
     {
@@ -80,6 +96,7 @@ const settings = {
 
 const FeaturedList = () => {
   const [dataArray, setDataArray] = useState(house);
+  const [activeButton, setActiveButton] = useState("house");
   const [loading, setLoading] = useState(true);
 
   const handleLinkClick = (event, arrayName) => {
@@ -87,12 +104,15 @@ const FeaturedList = () => {
     switch (arrayName) {
       case "house":
         setDataArray(house);
+        setActiveButton("house");
         break;
       case "villa":
         setDataArray(villa);
+        setActiveButton("villa");
         break;
       case "apartment":
         setDataArray(apartment);
+        setActiveButton("apartment");
         break;
       default:
         setDataArray([]);
@@ -108,6 +128,7 @@ const FeaturedList = () => {
           <li>
             <Button
               type="button"
+              className={`button ${activeButton === "house" ? "active" : ""}`}
               onClick={(event) => handleLinkClick(event, "house")}
             >
               <HouseIcon />
@@ -117,6 +138,7 @@ const FeaturedList = () => {
           <li>
             <Button
               type="button"
+              className={`button ${activeButton === "villa" ? "active" : ""}`}
               onClick={(event) => handleLinkClick(event, "villa")}
             >
               <VillaIcon />
@@ -126,6 +148,9 @@ const FeaturedList = () => {
           <li>
             <Button
               type="button"
+              className={`button ${
+                activeButton === "apartment" ? "active" : ""
+              }`}
               onClick={(event) => handleLinkClick(event, "apartment")}
             >
               <ApartmentIcon />

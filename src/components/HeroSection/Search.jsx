@@ -6,7 +6,7 @@ import {
 } from "./HeroSection.styled";
 
 import Place from "../../images/place.svg";
-import Arrow from "../../images/arrow-search.svg";
+import { ReactComponent as Arrow } from "../../images/arrow-search.svg";
 import { Default, Mobile } from "../Media/Media";
 
 const Search = () => {
@@ -25,7 +25,7 @@ const Search = () => {
 
       <HeroInputButton>
         Search
-        <img src={Arrow} alt="Arrow icon" style={{ marginLeft: 4 }} />
+        <Arrow style={{ marginLeft: 4 }} />
       </HeroInputButton>
     </HeroLabel>
   );

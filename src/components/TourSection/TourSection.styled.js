@@ -9,6 +9,10 @@ export const SliderTourSection = styled(Slider)`
   @media screen and (min-width: 480px) {
     right: 60px;
   }
+  @media screen and (min-width: 768px) {
+    right: 0;
+    bottom: 0;
+  }
   @media screen and (min-width: 1200px) {
     width: 521px;
     bottom: 0;
@@ -55,11 +59,31 @@ export const TourContainer = styled.section`
   @media screen and (min-width: 480px) {
     margin-bottom: 268px;
   }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 60px;
+  }
   @media screen and (min-width: 1200px) {
     padding-left: 40px;
     margin-bottom: 120px;
     display: flex;
     justify-content: space-between;
+  }
+`;
+
+export const BgImage = styled.img`
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    position: absolute;
+    content: "";
+    right: -120px;
+    top: -286px;
+    z-index: -1;
+  }
+
+  @media screen and (min-width: 1920px) {
+    right: -240px;
   }
 `;
 
@@ -117,7 +141,7 @@ export const TourTitle = styled.h2`
 `;
 
 export const TourDesc = styled.p`
-  width: 100vw;
+  width: 100%;
   font-weight: 400;
   font-size: 16px;
   line-height: calc(28 / 16);
@@ -130,6 +154,11 @@ export const TourDesc = styled.p`
   @media screen and (min-width: 1200px) {
     width: 413px;
   }
+  @media screen and (min-width: 1920px) {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+    min-width: 500px;
+  }
 `;
 
 export const TourListTitle = styled.p`
@@ -139,6 +168,10 @@ export const TourListTitle = styled.p`
   color: #1b1c57;
   opacity: 0.75;
   margin-bottom: 16px;
+  @media screen and (min-width: 1920px) {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
 `;
 
 export const TourList = styled.ul`
@@ -147,6 +180,9 @@ export const TourList = styled.ul`
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 450px;
   }
   @media screen and (min-width: 1200px) {
     width: 440px;
@@ -179,6 +215,10 @@ export const TourListText = styled.p`
   line-height: calc(20 / 16);
   text-transform: capitalize;
   color: #3c4563;
+  @media screen and (min-width: 1920px) {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
 `;
 
 export const TourPersonBox = styled.div`
@@ -192,8 +232,12 @@ export const TourPersonBox = styled.div`
     justify-content: start;
     flex-direction: row;
   }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+  }
   @media screen and (min-width: 1200px) {
     gap: 0;
+    margin-bottom: 0;
   }
 `;
 
@@ -208,27 +252,35 @@ export const TourPersonInfo = styled.div`
   }
 `;
 
-export const TourPersonName = styled.div`
+export const TourPersonName = styled.p`
   color: #0e1735;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(20 / 16);
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1200px) {
     font-size: 18px;
     line-height: calc(24 / 18);
   }
+  @media screen and (min-width: 1920px) {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
 `;
 
-export const TourPersonPosition = styled.div`
+export const TourPersonPosition = styled.p`
   font-weight: 500;
   font-size: 16px;
   line-height: calc(20 / 16);
   color: #888b97;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1200px) {
     font-size: 18px;
     line-height: calc(24 / 18);
+  }
+  @media screen and (min-width: 1920px) {
+    font-size: 20px;
+    line-height: calc(28 / 20);
   }
 `;
 
@@ -254,7 +306,9 @@ export const Button = styled.button`
     transform: scale(1.13);
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1920px) {
+    font-size: 18px;
+    line-height: calc(28 / 18);
   }
 `;
 

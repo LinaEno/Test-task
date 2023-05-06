@@ -22,8 +22,10 @@ export const SubSection = styled.section`
   }
 `;
 export const StyledForm = styled.form`
-  width: 100%;
   max-width: 425px;
+  @media screen and (min-width: 1920px) {
+    max-width: 500px;
+  }
 `;
 
 export const SubTitle = styled.h2`

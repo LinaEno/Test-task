@@ -5,14 +5,20 @@ export const HeroContainer = styled.section`
   align-items: center;
 
   height: 600px;
-  margin-bottom: 98px;
+  margin-bottom: 130px;
 
   @media screen and (min-width: 480px) {
     height: 500px;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    height: 550px;
   }
   @media screen and (min-width: 1200px) {
     margin-bottom: 120px;
     height: 634px;
+    justify-content: start;
   }
 
   .slider-wrapper {
@@ -21,47 +27,71 @@ export const HeroContainer = styled.section`
     height: 100%;
     width: 100%;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1199px) {
       width: 0;
     }
 
     .slider-bg {
-      height: 720px;
-      width: 720px;
-      padding: 48px;
-      padding-right: 0;
       @media screen and (max-width: 767px) {
         width: 280px;
       }
       @media screen and (min-width: 480px) {
         width: 440px;
       }
+      @media screen and (min-width: 1200px) {
+        height: 720px;
+        width: 640px;
+        padding: 48px;
+        padding-right: 0;
+      }
+      @media screen and (min-width: 1440px) {
+        width: 720px;
+      }
+      @media screen and (min-width: 1920px) {
+        width: 840px;
+      }
     }
     .slider-img {
-      height: 720px;
-      width: 720px;
-      display: flex;
-      position: absolute;
-      top: -86px;
-      right: -120px;
-      width: 280px;
-
       @media screen and (min-width: 480px) {
         width: 440px;
+      }
+      @media screen and (min-width: 1200px) {
+        height: 720px;
+        width: 640px;
+        display: flex;
+        position: absolute;
+        top: -86px;
+        right: -40px;
+      }
+      @media screen and (min-width: 1440px) {
+        width: 720px;
+        right: -105px;
+      }
+      @media screen and (min-width: 1920px) {
+        width: 840px;
+        right: -240px;
       }
     }
   }
   .hero-slider {
     position: absolute;
-    right: -120px;
-    bottom: 38px;
-    @media screen and (max-width: 767px) {
-      bottom: -60px;
-      right: 0;
-    }
+    bottom: -70px;
+    right: 0;
+
     @media screen and (min-width: 480px) {
       bottom: -20px;
     }
+    @media screen and (min-width: 1200px) {
+      right: -40px;
+      bottom: 38px;
+    }
+    @media screen and (min-width: 1440px) {
+      right: -104px;
+    }
+    @media screen and (min-width: 1920px) {
+      right: -238px;
+    }
+
     .slick-list {
       overflow: hidden;
       width: 300px;
@@ -69,7 +99,13 @@ export const HeroContainer = styled.section`
         width: 440px;
       }
       @media screen and (min-width: 1200px) {
-        width: 690px;
+        width: 600px;
+      }
+      @media screen and (min-width: 1440px) {
+        width: 675px;
+      }
+      @media screen and (min-width: 1920px) {
+        width: 795px;
       }
     }
   }
@@ -77,7 +113,10 @@ export const HeroContainer = styled.section`
 
 export const HeroBox = styled.div`
   width: 100%;
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 768px) {
+    width: 80%;
+  }
+  @media screen and (min-width: 1200px) {
     width: 496px;
   }
 `;
@@ -91,11 +130,20 @@ export const HeroTitle = styled.h1`
   line-height: calc(36 / 28);
   margin-bottom: 24px;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1200px) {
     margin-bottom: 24px;
     font-size: 40px;
     line-height: calc(50 / 40);
+    width: 420px;
+  }
+  @media screen and (min-width: 1440px) {
     width: 370px;
+  }
+  @media screen and (min-width: 1920px) {
+    margin-bottom: 28px;
+    font-size: 48px;
+    line-height: calc(56 / 48);
+    width: 496px;
   }
 `;
 
@@ -113,6 +161,10 @@ export const HeroText = styled.p`
   color: #626687;
   opacity: 0.75;
   margin-bottom: 32px;
+  @media screen and (min-width: 1920px) {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+  }
 `;
 
 export const HeroLabel = styled.label`
@@ -131,7 +183,7 @@ export const HeroLabel = styled.label`
 export const HeroInput = styled.input`
   font-weight: 500;
   font-size: 14px;
-  line-height: 22px;
+  line-height: calc(22 / 14);
   color: #626687;
   padding: 12px 0 12px 36px;
   border: 1px solid #e0e3eb;
@@ -153,8 +205,12 @@ export const HeroInput = styled.input`
     border: 1px solid #10b981;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 768px) {
     padding: 16px 0 16px 64px;
+  }
+  @media screen and (min-width: 1920px) {
+    font-size: 18px;
+    line-height: calc(24 / 18);
   }
 `;
 
@@ -164,7 +220,7 @@ export const HeroInputImg = styled.img`
   transform: translateY(-50%);
   left: 8px;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 768px) {
     left: 24px;
   }
 `;
@@ -180,6 +236,7 @@ export const HeroInputButton = styled.button`
   font-size: 14px;
   line-height: calc(22 / 14);
   color: #ffffff;
+  fill: #ffffff;
 
   display: flex;
   justify-content: center;
@@ -194,12 +251,16 @@ export const HeroInputButton = styled.button`
     outline: none;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 768px) {
     padding: 12px 16px;
     font-weight: 600;
     font-size: 14px;
     line-height: calc(22 / 14);
     min-width: 109px;
+  }
+  @media screen and (min-width: 1920px) {
+    font-size: 18px;
+    line-height: calc(24 / 18);
   }
 `;
 
@@ -213,6 +274,10 @@ export const PartnershipTitle = styled.h3`
   @media screen and (min-width: 1440px) {
     text-align: left;
   }
+  @media screen and (min-width: 1920px) {
+    font-size: 18px;
+    line-height: calc(24 / 18);
+  }
 `;
 
 export const PartnershipList = styled.ul`
@@ -220,8 +285,14 @@ export const PartnershipList = styled.ul`
   flex-wrap: wrap;
   gap: 28px;
   justify-content: space-around;
+  align-items: center;
+  width: 200px;
+  margin: 0 auto;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 480px) {
+    width: auto;
+  }
+  @media screen and (min-width: 1200px) {
     display: flex;
     gap: 24px;
   }
@@ -290,7 +361,7 @@ export const Container = styled.div`
 export const SubInput = styled(HeroInput)`
   padding: 11px 0 11px 36px;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 768px) {
     padding: 15px 0 15px 64px;
   }
 `;

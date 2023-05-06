@@ -6,6 +6,7 @@ import {
   RateSpan,
   Review,
   ReviewDescText,
+  ReviewImg,
   ReviewImgBox,
   ReviewPersonBox,
   ReviewPersonName,
@@ -19,11 +20,10 @@ const ReviewSlider = ({ review }) => {
     <Review>
       <Default>
         <ReviewImgBox className="slider-review">
-          <img
+          <ReviewImg
             src={review.image}
             alt="House foto"
             className="slider-review-img"
-            width={740}
             height={400}
             style={{ opacity: "0.7", borderRadius: "8px" }}
           />
