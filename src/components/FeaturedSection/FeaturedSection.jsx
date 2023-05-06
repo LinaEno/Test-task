@@ -1,4 +1,3 @@
-import React from "react";
 import FeaturedList from "./FeaturedList";
 import { FeaturedContainer, FeaturedPreTitle } from "./FeaturedSection.styled";
 

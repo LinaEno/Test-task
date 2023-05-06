@@ -1,18 +1,19 @@
+import { useState } from "react";
+
+import SliderElement from "./SliderElement";
+import ModalVideo from "../Modal/ModalVideo";
+import { fotoTour } from "../../constants/tour";
+import { Default } from "../Media/Media";
+
 import Play from "../../images/tour/play.svg";
 import Tour4 from "../../images/tour/tour-foto4.jpg";
 
-import SliderElement from "./SliderElement";
-
-import { fotoTour } from "../../constants/tour";
-import { useState } from "react";
-import ModalVideo from "../Modal/ModalVideo";
 import {
   SliderTourSection,
   SrcContainer,
   VideoBox,
   VideoBtn,
 } from "./TourSection.styled";
-import { Default } from "../Media/Media";
 
 const TourSrc = () => {
   const [showModal, setShowModal] = useState(false);

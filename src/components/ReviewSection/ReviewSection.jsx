@@ -1,5 +1,6 @@
-import { reviews } from "../../constants/review";
 import ReviewSlider from "./ReviewSlider";
+import { reviews } from "../../constants/review";
+
 import {
   ReviewContainer,
   ReviewPreTitle,

@@ -1,5 +1,7 @@
-import Star from "../../images/star.svg";
 import { Default } from "../Media/Media";
+
+import Star from "../../images/star.svg";
+
 import {
   PersonDesc,
   PersonName,

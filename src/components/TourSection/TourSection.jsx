@@ -1,6 +1,8 @@
 import TourDescription from "./TourDescription";
 import TourSrc from "./TourSrc";
+
 import bg from "../../images/bg/blur2.svg";
+
 import { BgImage, TourContainer } from "./TourSection.styled";
 
 const TourSection = () => {

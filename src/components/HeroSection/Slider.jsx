@@ -1,8 +1,7 @@
-import React from "react";
 import Slider from "react-slick";
 
-import { heroSlider } from "../../constants/heroSlider";
 import SliderItem from "./SliderItem";
+import { heroSlider } from "../../constants/heroSlider";
 
 const settings = {
   infinite: true,

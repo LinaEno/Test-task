@@ -1,12 +1,6 @@
-import {
-  SubInput,
-  HeroInputButton,
-  HeroInputImg,
-  HeroLabel,
-} from "../HeroSection/HeroSection.styled";
+import { DesktopOnly } from "../Media/Media";
 
 import Email from "../../images/email.svg";
-
 import sub1 from "../../images/subscribe/subscribe1.png";
 import sub2 from "../../images/subscribe/subscribe2.png";
 import sub3 from "../../images/subscribe/subscribe3.png";
@@ -15,13 +9,19 @@ import sub5 from "../../images/subscribe/subscribe5.png";
 import sub6 from "../../images/subscribe/subscribe6.png";
 import sub7 from "../../images/subscribe/subscribe7.png";
 import sub8 from "../../images/subscribe/subscribe8.png";
+
 import {
   StyledForm,
   SubImg,
   SubSection,
   SubTitle,
 } from "./SubscribeSection.styled";
-import { DesktopOnly } from "../Media/Media";
+import {
+  SubInput,
+  HeroInputButton,
+  HeroInputImg,
+  HeroLabel,
+} from "../HeroSection/HeroSection.styled";
 
 const SubscribeSection = () => {
   const handleSubmit = (e) => {

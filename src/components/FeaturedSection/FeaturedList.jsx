@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import { house, villa, apartment } from "../../constants/featuredHouse";
 import FeaturedItem from "./FeaturedItem";
+import { house, villa, apartment } from "../../constants/featuredHouse";
 
 import { ReactComponent as HouseIcon } from "../../images/house-fill.svg";
 import { ReactComponent as VillaIcon } from "../../images/ic_round-villa.svg";

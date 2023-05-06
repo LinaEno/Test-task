@@ -1,13 +1,14 @@
+import { Default, Mobile } from "../Media/Media";
+
+import Place from "../../images/place.svg";
+import { ReactComponent as Arrow } from "../../images/arrow-search.svg";
+
 import {
   HeroInput,
   HeroLabel,
   HeroInputImg,
   HeroInputButton,
 } from "./HeroSection.styled";
-
-import Place from "../../images/place.svg";
-import { ReactComponent as Arrow } from "../../images/arrow-search.svg";
-import { Default, Mobile } from "../Media/Media";
 
 const Search = () => {
   return (
