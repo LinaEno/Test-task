@@ -3,12 +3,16 @@ import styled from "styled-components";
 export const HeroContainer = styled.section`
   display: flex;
   align-items: center;
-  margin-bottom: 120px;
-  height: 634px;
 
-  @media screen and (max-width: 767px) {
-    height: 600px;
-    margin-bottom: 98px;
+  height: 600px;
+  margin-bottom: 98px;
+
+  @media screen and (min-width: 480px) {
+    height: 500px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 120px;
+    height: 634px;
   }
 
   .slider-wrapper {
@@ -16,9 +20,11 @@ export const HeroContainer = styled.section`
     display: flex;
     height: 100%;
     width: 100%;
+
     @media screen and (max-width: 767px) {
       width: 0;
     }
+
     .slider-bg {
       height: 720px;
       width: 720px;
@@ -26,6 +32,9 @@ export const HeroContainer = styled.section`
       padding-right: 0;
       @media screen and (max-width: 767px) {
         width: 280px;
+      }
+      @media screen and (min-width: 480px) {
+        width: 440px;
       }
     }
     .slider-img {
@@ -35,8 +44,10 @@ export const HeroContainer = styled.section`
       position: absolute;
       top: -86px;
       right: -120px;
-      @media screen and (max-width: 767px) {
-        width: 280px;
+      width: 280px;
+
+      @media screen and (min-width: 480px) {
+        width: 440px;
       }
     }
   }
@@ -48,12 +59,17 @@ export const HeroContainer = styled.section`
       bottom: -60px;
       right: 0;
     }
+    @media screen and (min-width: 480px) {
+      bottom: -20px;
+    }
     .slick-list {
-      width: 690px;
       overflow: hidden;
-      @media screen and (max-width: 767px) {
-        width: 300px;
-        overflow: hidden;
+      width: 300px;
+      @media screen and (min-width: 480px) {
+        width: 440px;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 690px;
       }
     }
   }
@@ -272,5 +288,13 @@ export const Container = styled.div`
 `;
 
 export const SubInput = styled(HeroInput)`
-  padding: 15px 0 15px 64px;
+  padding: 11px 0 11px 36px;
+
+  @media screen and (min-width: 1440px) {
+    padding: 15px 0 15px 64px;
+  }
+`;
+
+export const SubLabel = styled(HeroLabel)`
+  margin-bottom: 0;
 `;

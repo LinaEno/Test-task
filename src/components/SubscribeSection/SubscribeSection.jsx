@@ -21,6 +21,7 @@ import {
   SubSection,
   SubTitle,
 } from "./SubscribeSection.styled";
+import { DesktopOnly } from "../Media/Media";
 
 const SubscribeSection = () => {
   const handleSubmit = (e) => {
@@ -29,46 +30,48 @@ const SubscribeSection = () => {
 
   return (
     <SubSection className="subSection">
-      <SubImg
-        src={sub1}
-        alt="Subscribe image 1"
-        style={{ top: 38, left: 44 }}
-      />
-      <SubImg
-        src={sub2}
-        alt="Subscribe image 2"
-        style={{ top: 71, left: 204 }}
-      />
-      <SubImg
-        src={sub3}
-        alt="Subscribe image 3"
-        style={{ top: 173, left: 67 }}
-      />
-      <SubImg
-        src={sub4}
-        alt="Subscribe image 4"
-        style={{ top: 178, left: 195 }}
-      />
-      <SubImg
-        src={sub5}
-        alt="Subscribe image 5"
-        style={{ top: 44, right: 200 }}
-      />
-      <SubImg
-        src={sub6}
-        alt="Subscribe image 6"
-        style={{ top: 107, right: 82 }}
-      />
-      <SubImg
-        src={sub7}
-        alt="Subscribe image 7"
-        style={{ top: 143, right: 200 }}
-      />
-      <SubImg
-        src={sub8}
-        alt="Subscribe image 8"
-        style={{ top: 197, right: 73 }}
-      />
+      <DesktopOnly>
+        <SubImg
+          src={sub1}
+          alt="Subscribe image 1"
+          style={{ top: 38, left: 44 }}
+        />
+        <SubImg
+          src={sub2}
+          alt="Subscribe image 2"
+          style={{ top: 71, left: 204 }}
+        />
+        <SubImg
+          src={sub3}
+          alt="Subscribe image 3"
+          style={{ top: 173, left: 67 }}
+        />
+        <SubImg
+          src={sub4}
+          alt="Subscribe image 4"
+          style={{ top: 178, left: 195 }}
+        />
+        <SubImg
+          src={sub5}
+          alt="Subscribe image 5"
+          style={{ top: 44, right: 200 }}
+        />
+        <SubImg
+          src={sub6}
+          alt="Subscribe image 6"
+          style={{ top: 107, right: 82 }}
+        />
+        <SubImg
+          src={sub7}
+          alt="Subscribe image 7"
+          style={{ top: 143, right: 200 }}
+        />
+        <SubImg
+          src={sub8}
+          alt="Subscribe image 8"
+          style={{ top: 197, right: 73 }}
+        />
+      </DesktopOnly>
       <SubTitle>Subscribe For More Info and update from Hounter</SubTitle>
       <StyledForm onSubmit={handleSubmit}>
         <HeroLabel>

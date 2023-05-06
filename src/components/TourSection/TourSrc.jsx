@@ -12,6 +12,7 @@ import {
   VideoBox,
   VideoBtn,
 } from "./TourSection.styled";
+import { Default } from "../Media/Media";
 
 const TourSrc = () => {
   const [showModal, setShowModal] = useState(false);
@@ -23,6 +24,22 @@ const TourSrc = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const toggleVideoModal = () => {
@@ -31,13 +48,15 @@ const TourSrc = () => {
 
   return (
     <SrcContainer>
-      <VideoBox>
-        <img src={Tour4} alt="Video" />
-        <VideoBtn type="button" onClick={toggleVideoModal}>
-          <img src={Play} alt="Play button" />
-        </VideoBtn>
-        {showModal ? <ModalVideo onClose={toggleVideoModal} /> : null}
-      </VideoBox>
+      <Default>
+        <VideoBox>
+          <img src={Tour4} alt="Video" />
+          <VideoBtn type="button" onClick={toggleVideoModal}>
+            <img src={Play} alt="Play button" />
+          </VideoBtn>
+          {showModal ? <ModalVideo onClose={toggleVideoModal} /> : null}
+        </VideoBox>
+      </Default>
       <SliderTourSection {...settings}>
         {fotoTour.map((tour, idx) => (
           <SliderElement key={idx} tour={tour} />

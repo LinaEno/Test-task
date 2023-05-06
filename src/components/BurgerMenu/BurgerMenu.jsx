@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Box, Hamburger, MenuLinks, Nav } from "./BurgerMenu.styled";
 import { ButtonSignUp, LogoBox, LogoLink } from "../Navbar/Navbar.styled";
 import Logo from "../../images/logo.svg";
+import { ReactComponent as Arrow } from "../../images/arrow-down.svg";
 
 const BurgerMenu = () => {
   const [open, setOpen] = useState(false);
@@ -27,7 +28,10 @@ const BurgerMenu = () => {
       <MenuLinks open={open}>
         <Link>About Us</Link>
         <Link>Article</Link>
-        <Link>Property</Link>
+        <Link>
+          Property
+          <Arrow />
+        </Link>
         <ButtonSignUp type="submit">Sign Up!</ButtonSignUp>
       </MenuLinks>
     </Nav>

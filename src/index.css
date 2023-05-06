@@ -333,11 +333,24 @@ a:hover {
 .subSection {
   background-image: url(./images/subscribe/sub_background.jpg);
   background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 32px;
+  width: 100%;
 }
 
 @media screen and (min-width: 1920px) {
   .social__svg {
     width: 40px;
     height: 40px;
+  }
+  .subSection {
+    background: linear-gradient(
+      45deg,
+      rgba(150, 187, 249, 1) 0%,
+      rgba(220, 223, 242, 1) 33%,
+      rgba(241, 252, 248, 1) 59%,
+      rgba(220, 223, 242, 1) 93%,
+      rgba(176, 204, 251, 1) 100%
+    );
   }
 }

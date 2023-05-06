@@ -32,12 +32,17 @@ export const FeaturedPreTitle = styled.p`
       top: 9px;
     }
   }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 18px;
+    line-height: calc(24 / 18);
+  }
 `;
 
 export const FeaturedTitle = styled.h2`
   font-weight: 600;
-  font-size: 24px;
-  line-height: calc(28 / 24);
+  font-size: 32px;
+  line-height: calc(40 / 32);
   text-transform: capitalize;
   color: #1b1c57;
   margin-bottom: 12px;
@@ -45,6 +50,10 @@ export const FeaturedTitle = styled.h2`
   @media screen and (min-width: 1440px) {
     font-size: 32px;
     line-height: calc(40 / 32);
+  }
+  @media screen and (min-width: 1920px) {
+    font-size: 40px;
+    line-height: calc(50 / 40);
   }
 `;
 
@@ -66,7 +75,10 @@ export const FeaturedListBtn = styled.ul`
   flex-direction: column;
   gap: 12px;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 480px) {
+    flex-direction: row;
+  }
+  @media screen and (min-width: 1200px) {
     flex-direction: row;
     gap: 32px;
   }
@@ -82,7 +94,7 @@ export const Button = styled.button`
   line-height: calc(28 / 18);
   color: #888b97;
   fill: #888b97;
-  padding: 12px 24px;
+  padding: 8px 16px;
   border: 1px solid #e0e3eb;
   border-radius: 32px;
   transition: all 0.25s ease-in-out;
@@ -94,6 +106,9 @@ export const Button = styled.button`
     background-color: #d1fae5;
     border-color: #d1fae5;
   }
+  @media screen and (min-width: 768px) {
+    padding: 12px 24px;
+  }
 `;
 
 export const FeaturedImage = styled.img`
@@ -101,6 +116,9 @@ export const FeaturedImage = styled.img`
   object-fit: cover;
   border-radius: 24px;
   height: 382px;
+  @media screen and (min-width: 480px) {
+    width: 340px;
+  }
   @media screen and (min-width: 1440px) {
     width: 340px;
   }
@@ -116,7 +134,11 @@ export const FeaturedSlider = styled(Slider)`
   .slick-list {
     width: 300px;
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 480px) {
+      width: 440px;
+      height: 560px;
+    }
+    @media screen and (min-width: 1200px) {
       width: 1280px;
       overflow: hidden;
     }
@@ -132,6 +154,11 @@ export const FeaturedSlider = styled(Slider)`
     width: 300px !important;
     opacity: 1;
     margin-right: 0px;
+
+    @media screen and (min-width: 480px) {
+      margin-right: 40px;
+      width: 340px !important;
+    }
     @media screen and (min-width: 1440px) {
       margin-right: 40px;
       width: 340px !important;

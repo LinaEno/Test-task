@@ -2,20 +2,33 @@ import Slider from "react-slick";
 import styled from "styled-components";
 
 export const SliderTourSection = styled(Slider)`
-  width: 521px;
   position: absolute;
-  bottom: 0;
-  right: 20px;
   cursor: pointer;
+  width: 300px;
+  bottom: -200px;
+  @media screen and (min-width: 480px) {
+    right: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 521px;
+    bottom: 0;
+    right: 20px;
+  }
 
   .slider-tour {
-    width: 108px;
+    width: 0;
+    @media screen and (min-width: 1200px) {
+      width: 108px;
+    }
   }
   .slick-slide {
     margin-top: auto;
   }
   .slick-active {
-    width: 108px !important;
+    width: 0 !important;
+    @media screen and (min-width: 1200px) {
+      width: 108px !important;
+    }
   }
   .slick-slide .slider-tour {
     margin-left: 12px;
@@ -37,9 +50,12 @@ export const SliderTourSection = styled(Slider)`
 
 export const TourContainer = styled.section`
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 248px;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 480px) {
+    margin-bottom: 268px;
+  }
+  @media screen and (min-width: 1200px) {
     padding-left: 40px;
     margin-bottom: 120px;
     display: flex;
@@ -48,7 +64,10 @@ export const TourContainer = styled.section`
 `;
 
 export const TourDescriptionContainer = styled.div`
-  padding: 28px 0;
+  padding: 0;
+  @media screen and (min-width: 1200px) {
+    padding: 28px 0;
+  }
 `;
 
 export const TourPreTitle = styled.p`
@@ -60,7 +79,7 @@ export const TourPreTitle = styled.p`
   color: #f59e0b;
   margin-bottom: 12px;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1200px) {
     &::before {
       content: "";
       display: inline-block;
@@ -72,20 +91,28 @@ export const TourPreTitle = styled.p`
       top: 9px;
     }
   }
+  @media screen and (min-width: 1920px) {
+    font-size: 18px;
+    line-height: calc(24 / 18);
+  }
 `;
 
 export const TourTitle = styled.h2`
   font-weight: 600;
-  font-size: 24px;
-  line-height: calc(28 / 24);
+  font-size: 32px;
+  line-height: calc(40 / 32);
   text-transform: capitalize;
   color: #1b1c57;
   margin-bottom: 12px;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1200px) {
     font-size: 32px;
     line-height: calc(40 / 32);
     margin-bottom: 16px;
+  }
+  @media screen and (min-width: 1920px) {
+    font-size: 40px;
+    line-height: calc(50 / 40);
   }
 `;
 
@@ -97,7 +124,10 @@ export const TourDesc = styled.p`
   color: #626687;
   opacity: 0.75;
   margin-bottom: 16px;
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 480px) {
+    width: 440px;
+  }
+  @media screen and (min-width: 1200px) {
     width: 413px;
   }
 `;
@@ -113,9 +143,12 @@ export const TourListTitle = styled.p`
 
 export const TourList = styled.ul`
   display: block;
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 480px) {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1200px) {
     width: 440px;
     margin-bottom: 66px;
   }
@@ -128,7 +161,7 @@ export const TourListItem = styled.li`
   justify-content: start;
   margin: 0 0 16px;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 480px) {
     min-width: 193px;
     &:nth-child(odd) {
       margin-right: 53px;
@@ -155,9 +188,11 @@ export const TourPersonBox = styled.div`
   justify-content: center;
   gap: 12px;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 480px) {
     justify-content: start;
     flex-direction: row;
+  }
+  @media screen and (min-width: 1200px) {
     gap: 0;
   }
 `;
@@ -165,7 +200,10 @@ export const TourPersonBox = styled.div`
 export const TourPersonInfo = styled.div`
   margin-right: 0px;
   margin-left: 24px;
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 480px) {
+    margin-right: 24px;
+  }
+  @media screen and (min-width: 1200px) {
     margin-right: 57px;
   }
 `;

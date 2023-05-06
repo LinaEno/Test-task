@@ -1,4 +1,5 @@
 import Star from "../../images/star.svg";
+import { Default } from "../Media/Media";
 import {
   PersonDesc,
   PersonName,
@@ -16,16 +17,18 @@ import {
 const ReviewSlider = ({ review }) => {
   return (
     <Review>
-      <ReviewImgBox className="slider-review">
-        <img
-          src={review.image}
-          alt="House foto"
-          className="slider-review-img"
-          width={740}
-          height={400}
-          style={{ opacity: "0.7", borderRadius: "8px" }}
-        />
-      </ReviewImgBox>
+      <Default>
+        <ReviewImgBox className="slider-review">
+          <img
+            src={review.image}
+            alt="House foto"
+            className="slider-review-img"
+            width={740}
+            height={400}
+            style={{ opacity: "0.7", borderRadius: "8px" }}
+          />
+        </ReviewImgBox>
+      </Default>
       <ReviewTextBox>
         <ReviewTitleText>{review.title}</ReviewTitleText>
         <ReviewDescText>{review.desc}</ReviewDescText>

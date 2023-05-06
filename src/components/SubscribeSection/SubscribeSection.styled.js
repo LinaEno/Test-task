@@ -5,9 +5,21 @@ export const SubSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 65px 0;
+  padding: 32px 10px;
   border-radius: 32px;
-  margin-bottom: 120px;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 480px) {
+    padding: 36px 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 65px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 120px;
+  }
 `;
 export const StyledForm = styled.form`
   width: 100%;
@@ -16,13 +28,20 @@ export const StyledForm = styled.form`
 
 export const SubTitle = styled.h2`
   font-weight: 600;
-  font-size: 32px;
-  line-height: calc(48 / 32);
+  font-size: 24px;
+  line-height: calc(32 / 24);
   text-align: center;
   text-transform: capitalize;
   color: #1b1c57;
-  width: 424px;
-  margin-bottom: 32px;
+  width: 280px;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+    line-height: calc(48 / 32);
+    width: 424px;
+    margin-bottom: 32px;
+  }
 `;
 
 export const SubImg = styled.img`

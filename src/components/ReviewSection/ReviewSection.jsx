@@ -1,5 +1,3 @@
-import Slider from "react-slick";
-
 import { reviews } from "../../constants/review";
 import ReviewSlider from "./ReviewSlider";
 import {
@@ -18,6 +16,32 @@ const settings = {
   centerPadding: "56px",
   arrows: false,
   initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerPadding: "0px",
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerPadding: "0px",
+      },
+    },
+    {
+      breakpoint: 320,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerPadding: "0px",
+      },
+    },
+  ],
 };
 
 const ReviewSection = () => {
@@ -25,13 +49,11 @@ const ReviewSection = () => {
     <ReviewContainer>
       <ReviewPreTitle>See Our Review</ReviewPreTitle>
       <ReviewTitle>What Our User Say About Us</ReviewTitle>
-      {/* <div className="slider-container"> */}
       <ReviewSectionSlider {...settings}>
         {reviews.map((review) => (
           <ReviewSlider key={review.id} review={review} />
         ))}
       </ReviewSectionSlider>
-      {/* </div> */}
     </ReviewContainer>
   );
 };

@@ -3,8 +3,11 @@ import Slider from "react-slick";
 
 export const ReviewContainer = styled.section`
   position: relative;
-  padding-left: 40px;
-  margin-bottom: 160px;
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-left: 40px;
+    margin-bottom: 160px;
+  }
 `;
 
 export const ReviewPreTitle = styled.p`
@@ -16,16 +19,23 @@ export const ReviewPreTitle = styled.p`
   text-align: center;
   color: #f59e0b;
   margin-bottom: 12px;
-  &::before {
-    content: "";
-    display: block;
-    width: 32px;
-    height: 1px;
-    background-color: #f59e0b;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    top: -8px;
+
+  @media screen and (min-width: 1200px) {
+    &::before {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 1px;
+      background-color: #f59e0b;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      top: -8px;
+    }
+  }
+  @media screen and (min-width: 1920px) {
+    font-size: 18px;
+    line-height: calc(24 / 18);
   }
 `;
 
@@ -33,17 +43,34 @@ export const ReviewTitle = styled.h2`
   font-weight: 600;
   font-size: 32px;
   line-height: calc(40 / 32);
+  text-align: center;
   text-transform: capitalize;
   color: #1b1c57;
+  width: 300px;
+  margin: 0 auto;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 18px;
+
+  @media screen and (min-width: 768px) {
+    width: 424px;
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 40px;
+    line-height: calc(50 / 40);
+    width: 560px;
+  }
 `;
 
 export const ReviewSectionSlider = styled(Slider)`
   .slick-list {
-    left: -120px;
-    width: 1440px;
     overflow: hidden;
+
+    @media screen and (min-width: 1200px) {
+      left: -120px;
+      width: 1440px;
+    }
   }
 
   .slick-slide {
@@ -52,11 +79,17 @@ export const ReviewSectionSlider = styled(Slider)`
   }
 
   .slick-slide.slick-center {
-    margin-left: 56px;
-    margin-right: 56px;
+    margin: 0;
+    @media screen and (min-width: 1200px) {
+      margin-left: 56px;
+      margin-right: 56px;
+    }
   }
   .slick-slide.slick-active {
-    width: 740px !important;
+    width: 100vw !important;
+    @media screen and (min-width: 1200px) {
+      width: 740px !important;
+    }
   }
   .slick-slide:not(.slick-active) {
     opacity: 0;
@@ -66,7 +99,10 @@ export const ReviewSectionSlider = styled(Slider)`
     + .slick-slide.slick-active:not(
       .slick-slide.slick-center + .slick-slide.slick-active
     ):not(.slick-center) {
-    margin-left: -620px;
+    margin-left: 0;
+    @media screen and (min-width: 1200px) {
+      margin-left: -620px;
+    }
   }
 
   .slick-dotted.slick-slider {
@@ -75,13 +111,16 @@ export const ReviewSectionSlider = styled(Slider)`
 
   .slick-dots {
     position: absolute;
-    bottom: -32px;
+    bottom: 0px;
     display: block;
     width: 100%;
     padding: 0;
     margin: 0;
     list-style: none;
     text-align: center;
+    @media screen and (min-width: 1200px) {
+      bottom: -32px;
+    }
   }
 
   .slick-dots li {
@@ -144,8 +183,12 @@ export const ReviewSectionSlider = styled(Slider)`
 
 export const Review = styled.div`
   position: relative;
-  min-height: 505px;
-  width: 740px;
+  min-height: auto;
+  width: 100vw;
+  @media screen and (min-width: 1200px) {
+    min-height: 505px;
+    width: 740px;
+  }
 `;
 
 export const ReviewImgBox = styled.div`
@@ -153,16 +196,26 @@ export const ReviewImgBox = styled.div`
 `;
 
 export const ReviewTextBox = styled.div`
-  position: absolute;
-  z-index: 200;
-  padding: 32px;
+  position: relative;
   background-color: #fff;
-  width: 612px;
-  bottom: 10px;
-  left: 50%;
-  transform: translate(-50%);
-  box-shadow: 0px 9px 32px rgba(89, 92, 219, 0.05);
-  border-radius: 16px;
+  width: 95vw;
+  padding: 12px;
+  margin-bottom: 29px;
+
+  @media screen and (min-width: 480px) {
+    width: 440px;
+  }
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    z-index: 200;
+    padding: 32px;
+    width: 612px;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0px 9px 32px rgba(89, 92, 219, 0.05);
+    border-radius: 16px;
+  }
 `;
 
 export const ReviewTitleText = styled.h3`
@@ -190,11 +243,16 @@ export const ReviewPersonBox = styled.div`
 `;
 
 export const ReviewPersonName = styled.div`
-  margin: 0 24px;
-  width: 388px;
+  margin: 0px 24px;
+  width: 260px;
+
+  @media screen and (min-width: 1200px) {
+    margin: 0 24px;
+    width: 388px;
+  }
 `;
 
-export const PersonName = styled.polyline`
+export const PersonName = styled.p`
   font-weight: 500;
   font-size: 14px;
   line-height: calc(22 / 14);

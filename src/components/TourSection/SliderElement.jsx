@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Modal from "../Modal/Modal";
+import { Default } from "../Media/Media";
 
 const SliderElement = ({ tour }) => {
   const [showModal, setShowModal] = useState(false);
@@ -16,7 +17,9 @@ const SliderElement = ({ tour }) => {
         alt="Tour foto"
         onClick={toggleModal}
       />
-      {showModal ? <Modal onClose={toggleModal} tour={tour} /> : null}
+      <Default>
+        {showModal ? <Modal onClose={toggleModal} tour={tour} /> : null}
+      </Default>
     </div>
   );
 };

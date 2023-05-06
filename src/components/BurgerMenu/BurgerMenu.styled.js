@@ -4,9 +4,6 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* position: fixed;
-  top: 0;
-  right: 0; */
   width: 100%;
   height: 100%;
   z-index: 9999;
@@ -23,7 +20,7 @@ export const Hamburger = styled.div`
     justify-content: space-between;
     align-items: flex-end;
     width: 30px;
-    height: 21px;
+    height: 23px;
     position: relative;
     z-index: 2;
     cursor: pointer;
@@ -56,12 +53,13 @@ export const Hamburger = styled.div`
 export const MenuLinks = styled.div`
   display: ${({ open }) => (open ? "flex" : "none")};
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  gap: 12px;
   background: #fff;
   height: 100vh;
   text-align: center;
-  padding: 2rem;
+  padding: 72px 40px 40px;
   position: absolute;
   top: 0;
   right: 0;
@@ -72,17 +70,31 @@ export const MenuLinks = styled.div`
   visibility: ${({ open }) => (open ? "visible" : "hidden")};
 
   a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: #0d0c1d;
-    text-decoration: none;
-    transition: color 0.3s linear;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: capitalize;
+    padding: 8px 16px;
 
-    &:hover {
-      color: #343078;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #047857;
+    color: #047857;
+    fill: #047857;
+    border-radius: 32px;
+    transition: all 0.25s ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 117px;
+
+    &:hover,
+    &:focus {
+      border: 1px solid #047857;
+      color: #047857;
+      outline: none;
+      fill: #047857;
     }
   }
 `;
