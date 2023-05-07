@@ -275,6 +275,7 @@ export const TourPersonInfo = styled.div`
   }
   @media screen and (min-width: 1200px) {
     margin-right: 57px;
+margin-left: 24px;
   }
 `;
 
