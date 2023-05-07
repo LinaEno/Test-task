@@ -101,6 +101,7 @@ export const ArticleContent = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  width: 100%;
 
   @media screen and (min-width: 1200px) {
     flex-direction: row;
@@ -120,17 +121,18 @@ export const SmallArticleBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
+  width: 100%;
 `;
 
 export const SmallArticleWrapper = styled(Link)`
   display: flex;
   flex-direction: column;
   gap: 32px;
-  width: 300px;
+  width: 100%;
   cursor: pointer;
 
-  @media screen and (min-width: 440px) {
-    width: 400px;
+  @media screen and (min-width: 480px) {
+    width: 100%;
   }
 
   @media screen and (min-width: 768px) {
@@ -269,10 +271,12 @@ export const BgImage = styled.img`
   @media screen and (min-width: 1200px) {
     display: block;
     position: absolute;
-    content: "";
-    left: -120px;
+    left: -40px;
     top: -216px;
     z-index: -1;
+  }
+  @media screen and (min-width: 1440px) {
+    left: -120px;
   }
 
   @media screen and (min-width: 1920px) {

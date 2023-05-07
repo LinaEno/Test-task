@@ -50,6 +50,11 @@ export const SliderTourSection = styled(Slider)`
     width: 296px !important;
     height: 168px;
   }
+
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
 `;
 
 export const TourContainer = styled.section`
@@ -76,12 +81,13 @@ export const BgImage = styled.img`
   @media screen and (min-width: 1200px) {
     display: block;
     position: absolute;
-    content: "";
-    right: -120px;
+    right: -40px;
     top: -286px;
     z-index: -1;
   }
-
+  @media screen and (min-width: 1440px) {
+    right: -120px;
+  }
   @media screen and (min-width: 1920px) {
     right: -240px;
   }
@@ -243,9 +249,11 @@ export const TourPersonBox = styled.div`
 
 export const TourPersonInfo = styled.div`
   margin-right: 0px;
-  margin-left: 24px;
+  margin-left: 0px;
+  text-align: center;
   @media screen and (min-width: 480px) {
     margin-right: 24px;
+    text-align: left;
   }
   @media screen and (min-width: 1200px) {
     margin-right: 57px;

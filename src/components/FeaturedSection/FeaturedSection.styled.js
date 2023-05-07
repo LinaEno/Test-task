@@ -293,15 +293,14 @@ export const PersonPlace = styled.p`
 `;
 
 export const ArrowRightContainer = styled.div`
-  width: 0;
-  height: 0;
+  display: none !important;
 
   @media screen and (min-width: 1200px) {
-    display: block;
+    display: block !important;
     font-size: 0;
     line-height: 0;
     position: absolute;
-    top: 30px;
+    top: 36px;
     left: 97.5%;
     width: 60px;
     height: 52px;
@@ -316,9 +315,6 @@ export const ArrowRightContainer = styled.div`
     -ms-transform: translate(-50%);
     transform: translate(-50%);
     transition: all 0.25s ease-in-out;
-    @media screen and (min-width: 1920px) {
-      top: 36px;
-    }
     &:hover,
     &:focus {
       fill: #000;
@@ -328,16 +324,15 @@ export const ArrowRightContainer = styled.div`
 `;
 
 export const ArrowLeftContainer = styled.div`
-  width: 0;
-  height: 0;
+  display: none !important;
 
   @media screen and (min-width: 1200px) {
-    display: block;
+    display: block !important;
     left: calc(97.5% - 76px);
     font-size: 0;
     line-height: 0;
     position: absolute;
-    top: 30px;
+    top: 36px;
     display: block;
     width: 60px;
     height: 52px;
@@ -352,9 +347,6 @@ export const ArrowLeftContainer = styled.div`
     -ms-transform: translate(-50%);
     transform: translate(-50%);
     transition: all 0.25s ease-in-out;
-    @media screen and (min-width: 1920px) {
-      top: 36px;
-    }
     &:hover,
     &:focus {
       background-color: #10b981;
@@ -364,18 +356,18 @@ export const ArrowLeftContainer = styled.div`
 `;
 
 export const ArrowLeftStyled = styled(ArrowLeft)`
-  width: 0;
-  height: 0;
+  display: none !important;
   @media screen and (min-width: 1200px) {
+    display: block !important;
     width: 28px;
     height: 28px;
   }
 `;
 
 export const ArrowRightStyled = styled(ArrowRight)`
-  width: 0;
-  height: 0;
+  display: none !important;
   @media screen and (min-width: 1200px) {
+    display: block !important;
     width: 28px;
     height: 28px;
   }

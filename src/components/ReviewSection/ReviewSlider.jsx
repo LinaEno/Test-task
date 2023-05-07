@@ -24,7 +24,7 @@ const ReviewSlider = ({ review }) => {
         <ReviewImgBox className="slider-review">
           <ReviewImg
             src={review.image}
-            alt="House foto"
+            alt="House image"
             className="slider-review-img"
             height={400}
             style={{ opacity: "0.7", borderRadius: "8px" }}
@@ -37,8 +37,8 @@ const ReviewSlider = ({ review }) => {
         <ReviewPersonBox>
           <div>
             <img
-              src={review.person.foto}
-              alt="Person foto"
+              src={review.person.photo}
+              alt="Person"
               width={40}
               height={40}
             />

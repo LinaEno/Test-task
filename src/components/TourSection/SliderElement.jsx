@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useScrollDisable from "../../hooks/useScrollDisable";
 import Modal from "../Modal/Modal";
 import { Default } from "../Media/Media";
 
@@ -9,12 +10,14 @@ const SliderElement = ({ tour }) => {
     setShowModal(!showModal);
   };
 
+  useScrollDisable(showModal);
+
   return (
     <div className="slider-tour">
       <img
         className="slider-tour-img"
         src={tour.largeImg}
-        alt="Tour foto"
+        alt="Tour img"
         onClick={toggleModal}
       />
       <Default>

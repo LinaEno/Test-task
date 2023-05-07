@@ -14,13 +14,13 @@ const BigArticle = ({ article }) => {
   return (
     <BigArticleWrapper>
       <BigArticleImg
-        src={article.foto}
-        alt="Article foto"
+        src={article.photo}
+        alt="Article photo"
         style={{ marginBottom: 24 }}
       />
       <div>
         <PersonData>
-          <img src={article.fotoPerson} alt="Person foto" width={32} />
+          <img src={article.photoPerson} alt="Person" width={32} />
           <PersonName>{article.fullName}</PersonName>
         </PersonData>
         <BigArticleTitle>{article.title}</BigArticleTitle>

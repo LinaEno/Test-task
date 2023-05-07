@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useScrollDisable from "../../hooks/useScrollDisable";
 import { Link } from "react-router-dom";
 import Logo from "../../images/logo.svg";
 import { ReactComponent as Arrow } from "../../images/arrow-down.svg";
@@ -25,6 +26,8 @@ const BurgerMenu = () => {
   const handleClick = () => {
     setOpen(!open);
   };
+
+  useScrollDisable(open);
 
   return (
     <Nav>

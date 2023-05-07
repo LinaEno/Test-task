@@ -13,6 +13,7 @@ import sub8 from "../../images/subscribe/subscribe8.png";
 import {
   StyledForm,
   SubImg,
+  SubLabel,
   SubSection,
   SubTitle,
 } from "./SubscribeSection.styled";
@@ -20,7 +21,6 @@ import {
   SubInput,
   HeroInputButton,
   HeroInputImg,
-  HeroLabel,
 } from "../HeroSection/HeroSection.styled";
 
 const SubscribeSection = () => {
@@ -74,7 +74,7 @@ const SubscribeSection = () => {
       </DesktopOnly>
       <SubTitle>Subscribe For More Info and update from Hounter</SubTitle>
       <StyledForm onSubmit={handleSubmit}>
-        <HeroLabel>
+        <SubLabel>
           <HeroInputImg src={Email} alt="Place icon" />
           <SubInput
             type="email"
@@ -83,7 +83,7 @@ const SubscribeSection = () => {
             required
           />
           <HeroInputButton>Subsribe Now</HeroInputButton>
-        </HeroLabel>
+        </SubLabel>
       </StyledForm>
     </SubSection>
   );

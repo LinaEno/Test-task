@@ -21,6 +21,11 @@ export const HeroContainer = styled.section`
     justify-content: start;
   }
 
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+
   .slider-wrapper {
     position: relative;
     display: flex;
@@ -130,11 +135,15 @@ export const HeroTitle = styled.h1`
   line-height: calc(36 / 28);
   margin-bottom: 24px;
 
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
   @media screen and (min-width: 1200px) {
     margin-bottom: 24px;
     font-size: 40px;
     line-height: calc(50 / 40);
     width: 420px;
+    text-align: left;
   }
   @media screen and (min-width: 1440px) {
     width: 370px;
@@ -161,6 +170,12 @@ export const HeroText = styled.p`
   color: #626687;
   opacity: 0.75;
   margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
   @media screen and (min-width: 1920px) {
     font-size: 24px;
     line-height: calc(32 / 24);

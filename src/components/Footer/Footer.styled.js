@@ -4,17 +4,22 @@ import styled from "styled-components";
 export const FooterBox = styled.footer`
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
   padding-bottom: 40px;
 
   @media screen and (min-width: 480px) {
+    .nav-wrapper:nth-child(2) {
+      margin-left: 40px;
+    }
   }
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
     padding-bottom: 60px;
+    .nav-wrapper:nth-child(2) {
+      margin-left: 0;
+    }
   }
 
   @media screen and (min-width: 1200px) {
@@ -81,12 +86,8 @@ export const FooterDesc = styled.p`
 
 export const SocialList = styled.ul`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 24px;
-
-  @media screen and (min-width: 768px) {
-    justify-content: flex-start;
-  }
 `;
 
 export const SocialLink = styled(Link)`
@@ -103,7 +104,6 @@ export const SocialLink = styled(Link)`
 export const NavBox = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   gap: 24px;
   width: 300px;
 
@@ -169,6 +169,10 @@ export const NavLink = styled(Link)`
     line-height: calc(24 / 20);
   }
 `;
+
+// export const NavWrapper = styled.div`
+//   min-width: 101px;
+// `;
 
 export const NavItem = styled.li`
   min-width: 101px;

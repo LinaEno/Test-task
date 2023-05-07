@@ -101,18 +101,16 @@ const FeaturedList = () => {
 
   const handleLinkClick = (event, arrayName) => {
     event.preventDefault();
+    setActiveButton(arrayName);
     switch (arrayName) {
       case "house":
         setDataArray(house);
-        setActiveButton("house");
         break;
       case "villa":
         setDataArray(villa);
-        setActiveButton("villa");
         break;
       case "apartment":
         setDataArray(apartment);
-        setActiveButton("apartment");
         break;
       default:
         setDataArray([]);

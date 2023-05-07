@@ -51,7 +51,7 @@ const Footer = () => {
         </SocialList>
       </div>
       <NavBox>
-        <div>
+        <div className="nav-wrapper">
           <NavTitle>Property</NavTitle>
           <NavList>
             <li>
@@ -65,7 +65,7 @@ const Footer = () => {
             </li>
           </NavList>
         </div>
-        <div>
+        <div className="nav-wrapper">
           <NavTitle>Article</NavTitle>
           <NavList>
             <NavItem>
@@ -82,7 +82,7 @@ const Footer = () => {
             </NavItem>
           </NavList>
         </div>
-        <div>
+        <div className="nav-wrapper">
           <NavTitle>Contact</NavTitle>
           <address>
             <NavList>

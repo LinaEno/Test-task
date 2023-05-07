@@ -25,7 +25,7 @@ const Modal = ({ tour, onClose }) => {
   return createPortal(
     <Overlay onClick={handleBackdropClick}>
       <ModalContainer>
-        <ModalImage src={tour.largeImg} alt="Large foto" />
+        <ModalImage src={tour.largeImg} alt="Large img" />
       </ModalContainer>
     </Overlay>,
     modalRoot

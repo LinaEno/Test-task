@@ -23,6 +23,7 @@ const ModalVideo = ({ onClose }) => {
       onClose();
     }
   };
+
   return createPortal(
     <Overlay onClick={handleBackdropClick}>
       <ModalContainer>

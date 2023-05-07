@@ -11,8 +11,8 @@ import Person4 from "../images/persons/cameron.png";
 export const articles = [
   {
     id: 1,
-    foto: Article1,
-    fotoPerson: Person1,
+    photo: Article1,
+    photoPerson: Person1,
     fullName: "Dianne Russell",
     title: "The things we need to check when we want to buy a house",
     time: "4 min read",
@@ -20,8 +20,8 @@ export const articles = [
   },
   {
     id: 2,
-    foto: Article2,
-    fotoPerson: Person2,
+    photo: Article2,
+    photoPerson: Person2,
     fullName: "Courtney Henry",
     title: "7 Ways to distinguish the quality of the house we want to buy",
     time: "6 min read",
@@ -29,8 +29,8 @@ export const articles = [
   },
   {
     id: 3,
-    foto: Article3,
-    fotoPerson: Person3,
+    photo: Article3,
+    photoPerson: Person3,
     fullName: "Darlene Robertson",
     title: "The best way to know the quality of the house we want to buy",
     time: "2 min read",
@@ -41,8 +41,8 @@ export const articles = [
 export const bigArticle = [
   {
     id: 1,
-    foto: Article4,
-    fotoPerson: Person4,
+    photo: Article4,
+    photoPerson: Person4,
     fullName: "Cameron Williamson",
     title: "12 Things to know before buying a house",
     desc: "Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house",

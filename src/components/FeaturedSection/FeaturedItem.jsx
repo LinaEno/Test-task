@@ -19,9 +19,9 @@ const FeaturedItem = ({ item, onLoad }) => {
     <FeaturedSliderItem className="slider-featured">
       <FeaturedImage
         onLoad={handleLoad}
-        src={item.foto}
+        src={item.photo}
         height={382}
-        alt="foto"
+        alt="photo"
         className="slider-featured-img"
       />
       <FeaturedTag text={item.tags.title}>
@@ -35,7 +35,7 @@ const FeaturedItem = ({ item, onLoad }) => {
         </SalaryDesc>
       </SalaryBox>
       <PersonBox>
-        <img src={item.person.foto} alt="foto" />
+        <img src={item.person.photo} alt="Person" />
         <div>
           <PersonName>{item.person.fullName}</PersonName>
           <PersonPlace>{item.person.place}</PersonPlace>

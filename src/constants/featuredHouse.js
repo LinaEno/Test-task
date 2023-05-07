@@ -25,7 +25,7 @@ import Wallet from "../images/icons/wallet.svg";
 export const house = [
   {
     id: 1,
-    foto: House1,
+    photo: House1,
     tags: {
       icon: Fire,
       title: "Popular",
@@ -33,14 +33,14 @@ export const house = [
     name: "Roselands House",
     salary: 35000000,
     person: {
-      foto: Person1,
+      photo: Person1,
       fullName: "Dianne Russell",
       place: "Manchester, Kentucky",
     },
   },
   {
     id: 2,
-    foto: House2,
+    photo: House2,
     tags: {
       icon: Home,
       title: "New house",
@@ -48,14 +48,14 @@ export const house = [
     name: "Woodlandside",
     salary: 20000000,
     person: {
-      foto: Person2,
+      photo: Person2,
       fullName: "Robert Fox",
       place: "Dr. San Jose, South Dakota",
     },
   },
   {
     id: 3,
-    foto: House3,
+    photo: House3,
     tags: {
       icon: Wallet,
       title: "Best Deals",
@@ -63,14 +63,14 @@ export const house = [
     name: "The Old Lighthouse",
     salary: 44000000,
     person: {
-      foto: Person3,
+      photo: Person3,
       fullName: "Ronald Richards",
       place: "Santa Ana, Illinois",
     },
   },
   {
     id: 4,
-    foto: House1,
+    photo: House1,
     tags: {
       icon: Fire,
       title: "Popular",
@@ -78,14 +78,14 @@ export const house = [
     name: "Roselands House",
     salary: 35000000,
     person: {
-      foto: Person1,
+      photo: Person1,
       fullName: "Dianne Russell",
       place: "Manchester, Kentucky",
     },
   },
   {
     id: 5,
-    foto: House4,
+    photo: House4,
     tags: {
       icon: Home,
       title: "New house",
@@ -93,7 +93,7 @@ export const house = [
     name: "Cosmo's House",
     salary: 22000000,
     person: {
-      foto: Person4,
+      photo: Person4,
       fullName: "Jenny Wilson",
       place: "Preston Rd. Inglewood, Maine 98380",
     },
@@ -103,7 +103,7 @@ export const house = [
 export const villa = [
   {
     id: 1,
-    foto: Villa3,
+    photo: Villa3,
     tags: {
       icon: Wallet,
       title: "Best Deals",
@@ -111,14 +111,14 @@ export const villa = [
     name: "Ocean's Edge Villa",
     salary: 43000000,
     person: {
-      foto: Person3,
+      photo: Person3,
       fullName: "Ronald Richards",
       place: "Santa Ana, Illinois",
     },
   },
   {
     id: 2,
-    foto: Villa1,
+    photo: Villa1,
     tags: {
       icon: Fire,
       title: "Popular",
@@ -126,14 +126,14 @@ export const villa = [
     name: "Sea Breeze Estate",
     salary: 31000000,
     person: {
-      foto: Person1,
+      photo: Person1,
       fullName: "Dianne Russell",
       place: "Manchester, Kentucky",
     },
   },
   {
     id: 3,
-    foto: Villa2,
+    photo: Villa2,
     tags: {
       icon: Home,
       title: "New house",
@@ -141,7 +141,7 @@ export const villa = [
     name: "Coastal Retreat Mansion",
     salary: 26000000,
     person: {
-      foto: Person2,
+      photo: Person2,
       fullName: "Robert Fox",
       place: "Dr. San Jose, South Dakota",
     },
@@ -149,7 +149,7 @@ export const villa = [
 
   {
     id: 4,
-    foto: Villa4,
+    photo: Villa4,
     tags: {
       icon: Fire,
       title: "Popular",
@@ -157,14 +157,14 @@ export const villa = [
     name: "Shoreline Sanctuary",
     salary: 33000000,
     person: {
-      foto: Person4,
+      photo: Person4,
       fullName: "Jenny Wilson",
       place: "Preston Rd. Inglewood, Maine 98380",
     },
   },
   {
     id: 5,
-    foto: Villa1,
+    photo: Villa1,
     tags: {
       icon: Fire,
       title: "Popular",
@@ -172,7 +172,7 @@ export const villa = [
     name: "Sea Breeze Estate",
     salary: 31000000,
     person: {
-      foto: Person1,
+      photo: Person1,
       fullName: "Dianne Russell",
       place: "Manchester, Kentucky",
     },
@@ -182,7 +182,7 @@ export const villa = [
 export const apartment = [
   {
     id: 1,
-    foto: Apartment2,
+    photo: Apartment2,
     tags: {
       icon: Fire,
       title: "Popular",
@@ -190,14 +190,14 @@ export const apartment = [
     name: "Retreat Apartments",
     salary: 31000000,
     person: {
-      foto: Person1,
+      photo: Person1,
       fullName: "Dianne Russell",
       place: "Manchester, Kentucky",
     },
   },
   {
     id: 2,
-    foto: Apartment1,
+    photo: Apartment1,
     tags: {
       icon: Wallet,
       title: "Best Deals",
@@ -205,7 +205,7 @@ export const apartment = [
     name: "Oasis Apartments",
     salary: 43000000,
     person: {
-      foto: Person3,
+      photo: Person3,
       fullName: "Ronald Richards",
       place: "Santa Ana, Illinois",
     },
@@ -213,7 +213,7 @@ export const apartment = [
 
   {
     id: 3,
-    foto: Apartment3,
+    photo: Apartment3,
     tags: {
       icon: Home,
       title: "New house",
@@ -221,7 +221,7 @@ export const apartment = [
     name: "Coastal Breeze Suites",
     salary: 26000000,
     person: {
-      foto: Person2,
+      photo: Person2,
       fullName: "Robert Fox",
       place: "Dr. San Jose, South Dakota",
     },
@@ -229,7 +229,7 @@ export const apartment = [
 
   {
     id: 4,
-    foto: Apartment4,
+    photo: Apartment4,
     tags: {
       icon: Fire,
       title: "Popular",
@@ -237,14 +237,14 @@ export const apartment = [
     name: "Ocean View Residences",
     salary: 33000000,
     person: {
-      foto: Person4,
+      photo: Person4,
       fullName: "Jenny Wilson",
       place: "Preston Rd. Inglewood, Maine 98380",
     },
   },
   {
     id: 5,
-    foto: Apartment1,
+    photo: Apartment1,
     tags: {
       icon: Wallet,
       title: "Best Deals",
@@ -252,7 +252,7 @@ export const apartment = [
     name: "Oasis Apartments",
     salary: 43000000,
     person: {
-      foto: Person3,
+      photo: Person3,
       fullName: "Ronald Richards",
       place: "Santa Ana, Illinois",
     },

@@ -50,7 +50,7 @@ const TourDescription = () => {
         </TourListItem>
       </TourList>
       <TourPersonBox>
-        <img src={Person} alt="Person foto" width={56} height={56} />
+        <img src={Person} alt="Person" width={56} height={56} />
         <TourPersonInfo>
           <TourPersonName>Dianne Russell</TourPersonName>
           <TourPersonPosition>Manager Director</TourPersonPosition>

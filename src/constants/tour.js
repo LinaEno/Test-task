@@ -5,7 +5,7 @@ import TourLarge1 from "../images/tour/tour-large1.jpg";
 import TourLarge2 from "../images/tour/tour-large2.jpg";
 import TourLarge3 from "../images/tour/tour-large3.jpg";
 
-export const fotoTour = [
+export const photoTour = [
   {
     smallImg: Tour1,
     largeImg: TourLarge1,

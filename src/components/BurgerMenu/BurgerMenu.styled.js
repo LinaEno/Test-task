@@ -60,7 +60,7 @@ export const MenuLinks = styled.div`
   height: 100vh;
   text-align: center;
   padding: 72px 40px 40px;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   transition: transform 0.3s ease-in-out;

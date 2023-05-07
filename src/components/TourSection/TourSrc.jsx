@@ -1,8 +1,9 @@
 import { useState } from "react";
 
+import useScrollDisable from "../../hooks/useScrollDisable";
 import SliderElement from "./SliderElement";
 import ModalVideo from "../Modal/ModalVideo";
-import { fotoTour } from "../../constants/tour";
+import { photoTour } from "../../constants/tour";
 import { Default } from "../Media/Media";
 
 import Play from "../../images/tour/play.svg";
@@ -47,6 +48,8 @@ const TourSrc = () => {
     setShowModal(!showModal);
   };
 
+  useScrollDisable(showModal);
+
   return (
     <SrcContainer>
       <Default>
@@ -59,7 +62,7 @@ const TourSrc = () => {
         </VideoBox>
       </Default>
       <SliderTourSection {...settings}>
-        {fotoTour.map((tour, idx) => (
+        {photoTour.map((tour, idx) => (
           <SliderElement key={idx} tour={tour} />
         ))}
       </SliderTourSection>

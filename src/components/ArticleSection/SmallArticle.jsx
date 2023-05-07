@@ -12,10 +12,10 @@ import {
 const SmallArticle = ({ article }) => {
   return (
     <SmallArticleWrapper>
-      <SmallArticleImg src={article.foto} alt="Article foto" />
+      <SmallArticleImg src={article.photo} alt="Article photo" />
       <div>
         <PersonData>
-          <img src={article.fotoPerson} alt="Person foto" width={32} />
+          <img src={article.photoPerson} alt="Person" width={32} />
           <PersonName>{article.fullName}</PersonName>
         </PersonData>
         <SmallArticleTitle>{article.title}</SmallArticleTitle>
