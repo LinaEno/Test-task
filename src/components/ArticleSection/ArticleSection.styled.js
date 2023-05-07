@@ -143,6 +143,7 @@ export const SmallArticleWrapper = styled(Link)`
 `;
 
 export const SmallArticleImg = styled.img`
+  border-radius: 16px;
   @media screen and (min-width: 1920px) {
     width: 250px;
   }
