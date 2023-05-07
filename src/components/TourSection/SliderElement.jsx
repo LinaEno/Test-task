@@ -14,12 +14,10 @@ const SliderElement = ({ tour }) => {
 
   return (
     <div className="slider-tour">
-      <img
-        className="slider-tour-img"
-        src={tour.largeImg}
-        alt="Tour img"
-        onClick={toggleModal}
-      />
+      <button className="slider-tour-img" type="button" onClick={toggleModal}>
+        <img src={tour.largeImg} alt="Tour img" />
+      </button>
+
       <Default>
         {showModal ? <Modal onClose={toggleModal} tour={tour} /> : null}
       </Default>

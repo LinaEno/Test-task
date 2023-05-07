@@ -226,7 +226,7 @@ export const FeaturedTag = styled.div`
       case "Best Deals":
         return "#D1FAE5";
       default:
-        return;
+        return null;
     }
   }};
   color: ${(props) => {
@@ -238,7 +238,7 @@ export const FeaturedTag = styled.div`
       case "Best Deals":
         return "#047857";
       default:
-        return;
+        return null;
     }
   }};
 `;

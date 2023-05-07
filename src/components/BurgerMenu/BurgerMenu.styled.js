@@ -69,7 +69,7 @@ export const MenuLinks = styled.div`
   z-index: 1;
   visibility: ${({ open }) => (open ? "visible" : "hidden")};
 
-  a {
+  .menu-link {
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;

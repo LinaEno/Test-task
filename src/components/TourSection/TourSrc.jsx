@@ -62,8 +62,8 @@ const TourSrc = () => {
         </VideoBox>
       </Default>
       <SliderTourSection {...settings}>
-        {photoTour.map((tour, idx) => (
-          <SliderElement key={idx} tour={tour} />
+        {photoTour.map((tour) => (
+          <SliderElement key={tour.smallImg} tour={tour} />
         ))}
       </SliderTourSection>
     </SrcContainer>

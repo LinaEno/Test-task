@@ -31,7 +31,7 @@ const ModalVideo = ({ onClose }) => {
           width={900}
           height={500}
           url="https://res.cloudinary.com/du0wwqbv3/video/upload/v1683134143/istockphoto-1400073632-640_adpp_is_vgj9xd.mp4"
-          controls={true}
+          controls
           volume={0.5}
         />
       </ModalContainer>

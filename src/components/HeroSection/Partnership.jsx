@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 import { partnership } from "../../constants/partnership";
 
 import { PartnershipList, PartnershipTitle } from "./HeroSection.styled";

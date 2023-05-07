@@ -38,9 +38,19 @@ export const SliderTourSection = styled(Slider)`
     margin-left: 12px;
   }
   .slick-slide .slider-tour-img {
+    background: none;
+    border: none;
+    padding: 0;
     width: 96px;
     height: 80px;
-    object-fit: cover;
+    &:focus {
+      outline: 1px solid black;
+    }
+    img {
+      width: 96px;
+      height: 80px;
+      object-fit: cover;
+    }
   }
   .slick-current .slider-tour {
     margin-left: 0;
@@ -49,6 +59,10 @@ export const SliderTourSection = styled(Slider)`
   .slick-current .slider-tour-img {
     width: 296px !important;
     height: 168px;
+    img {
+      width: 296px !important;
+      height: 168px;
+    }
   }
 
   .slick-prev,

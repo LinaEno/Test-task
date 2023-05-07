@@ -1,11 +1,14 @@
 import { useState } from "react";
-import useScrollDisable from "../../hooks/useScrollDisable";
 import { Link } from "react-router-dom";
+
+import useScrollDisable from "../../hooks/useScrollDisable";
+
 import Logo from "../../images/logo.svg";
 import { ReactComponent as Arrow } from "../../images/arrow-down.svg";
 import { ReactComponent as HouseIcon } from "../../images/house-fill.svg";
 import { ReactComponent as VillaIcon } from "../../images/ic_round-villa.svg";
 import { ReactComponent as ApartmentIcon } from "../../images/ic_round-apartment.svg";
+
 import { Box, Hamburger, MenuLinks, Nav } from "./BurgerMenu.styled";
 import {
   ButtonSignUp,
@@ -43,12 +46,16 @@ const BurgerMenu = () => {
         </Hamburger>
       </Box>
       <MenuLinks open={open}>
-        <Link>About Us</Link>
-        <Link>Article</Link>
-        <Link onClick={toggleShowList}>
+        <Link to="#" className="menu-link">
+          About Us
+        </Link>
+        <Link to="#" className="menu-link">
+          Article
+        </Link>
+        <button type="button" className="menu-link" onClick={toggleShowList}>
           Property
           <Arrow />
-        </Link>
+        </button>
         {showList && (
           <PropertyList>
             <li>

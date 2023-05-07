@@ -24,12 +24,12 @@ const ArticleSection = () => {
       <ArticleContent>
         <SmallArticleBox>
           {articles.map((article) => (
-            <SmallArticle article={article} />
+            <SmallArticle key={article.id} article={article} />
           ))}
         </SmallArticleBox>
         <DesktopOnly>
           {bigArticle.map((article) => (
-            <BigArticle article={article} />
+            <BigArticle key={article.id} article={article} />
           ))}
         </DesktopOnly>
       </ArticleContent>
