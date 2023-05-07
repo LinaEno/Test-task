@@ -11,7 +11,7 @@ export const FeaturedContainer = styled.section`
     margin-bottom: 0;
   }
   @media screen and (min-width: 768px) {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
   @media screen and (min-width: 1200px) {
     padding-left: 40px;
@@ -54,6 +54,10 @@ export const FeaturedTitle = styled.h2`
   text-transform: capitalize;
   color: #1b1c57;
   margin-bottom: 12px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+  }
 
   @media screen and (min-width: 1200px) {
     font-size: 32px;
@@ -166,7 +170,7 @@ export const FeaturedSlider = styled(Slider)`
       width: 700px;
     }
     @media screen and (min-width: 1200px) {
-      width: 1120px;
+      width: 1110px;
     }
     @media screen and (min-width: 1440px) {
       width: 1280px;
@@ -191,7 +195,11 @@ export const FeaturedSlider = styled(Slider)`
       margin-right: 40px;
       width: 340px !important;
     }
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: 768px) {
+      margin-right: 10px;
+      width: 340px !important;
+    }
+    @media screen and (min-width: 1200px) {
       margin-right: 40px;
       width: 380px !important;
     }

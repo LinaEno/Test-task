@@ -65,12 +65,12 @@ export const HeroContainer = styled.section`
         width: 640px;
         display: flex;
         position: absolute;
-        top: -86px;
-        right: -40px;
+        top: -92px;
+        right: -42px;
       }
       @media screen and (min-width: 1440px) {
         width: 720px;
-        right: -105px;
+        right: -100px;
       }
       @media screen and (min-width: 1920px) {
         width: 840px;
@@ -91,7 +91,7 @@ export const HeroContainer = styled.section`
       bottom: 38px;
     }
     @media screen and (min-width: 1440px) {
-      right: -104px;
+      right: -102px;
     }
     @media screen and (min-width: 1920px) {
       right: -238px;
@@ -308,6 +308,10 @@ export const PartnershipList = styled.ul`
     width: auto;
   }
   @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 20px;
+  }
+  @media screen and (min-width: 1440px) {
     display: flex;
     gap: 24px;
   }

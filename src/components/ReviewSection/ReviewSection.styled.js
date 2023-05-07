@@ -53,7 +53,7 @@ export const ReviewTitle = styled.h2`
 
   @media screen and (min-width: 768px) {
     width: auto;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -67,8 +67,8 @@ export const ReviewSectionSlider = styled(Slider)`
     overflow: hidden;
 
     @media screen and (min-width: 1200px) {
-      left: -80px;
-      width: 1200px;
+      left: -82px;
+      width: 1198px;
     }
     @media screen and (min-width: 1440px) {
       left: -160px;

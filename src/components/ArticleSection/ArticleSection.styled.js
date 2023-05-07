@@ -53,7 +53,7 @@ export const ArticleTitle = styled.h2`
 
   @media screen and (min-width: 768px) {
     width: 424px;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -86,6 +86,9 @@ export const ArticleButton = styled.button`
     outline: none;
   }
 
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+  }
   @media screen and (min-width: 1200px) {
     margin-bottom: 40px;
   }
@@ -127,13 +130,9 @@ export const SmallArticleBox = styled.div`
 export const SmallArticleWrapper = styled(Link)`
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 12px;
   width: 100%;
   cursor: pointer;
-
-  @media screen and (min-width: 480px) {
-    width: 100%;
-  }
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -153,7 +152,11 @@ export const PersonData = styled.div`
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 17px;
+  margin-bottom: 12px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+  }
 `;
 
 export const PersonName = styled.p`
@@ -175,10 +178,13 @@ export const SmallArticleTitle = styled.p`
   text-transform: capitalize;
   color: #1b1c57;
   width: 300px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 
   @media screen and (min-width: 480px) {
     width: 340px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
   }
 
   @media screen and (min-width: 1920px) {

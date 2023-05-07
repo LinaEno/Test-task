@@ -135,11 +135,15 @@ export const TourTitle = styled.h2`
   color: #1b1c57;
   margin-bottom: 12px;
 
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+  }
+
   @media screen and (min-width: 1200px) {
     font-size: 32px;
     line-height: calc(40 / 32);
-    margin-bottom: 16px;
   }
+
   @media screen and (min-width: 1920px) {
     font-size: 40px;
     line-height: calc(50 / 40);
